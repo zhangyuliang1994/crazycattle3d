@@ -9,7 +9,7 @@ export const layout = {
     isVisible: true,
     sections: {
       about: true,
-      quickLinks: true,
+      quickLinks: false,
       social: true,
       legal: true,
     }
@@ -38,3 +38,4 @@ export const layout = {
     }
   }
 } as const;
+

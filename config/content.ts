@@ -16,14 +16,13 @@ export const content = {
   footer: {
     about: {
       title: "About",
-      description: "Your premier destination for free online gaming entertainment. Play instantly, anywhere, anytime.",
+      description: "Play Crazy Cattle 3D - a free physics-based battle game right in your browser. No downloads required.",
     },
     quickLinks: {
       title: "Quick Links",
       links: [
-        { text: "Love Tester", href: "/games/love-tester" },
-        { text: "Bubble Shooter", href: "/games/bubble-shooter" },
-        { text: "Candy Match", href: "/games/candy-match" }
+        { text: "AI Image", href: "https://aiimage.pics" },
+        { text: "Blue Prince GUide", href: "https://blue-prince.net" },
       ]
     },
     social: {
@@ -31,11 +30,11 @@ export const content = {
       links: [
         {
           icon: "Facebook",
-          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent('Blossom Game - Free Online Puzzle Adventure')}&u=${encodeURIComponent('https://blossom-game.com')}`
+          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent('Crazy Cattle 3D')}&u=${encodeURIComponent('https://crazycattle.cc')}`
         },
         {
           icon: "Twitter",
-          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('🌸 Playing Blossom - the most beautiful puzzle game online! No downloads needed, just pure entertainment. Join me at')}&url=${encodeURIComponent('https://blossom-game.com')}&hashtags=BlossomGame,PuzzleGames`
+          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazycattle.cc')}&hashtags=BlossomGame,PuzzleGames`
         }
       ]
     },
@@ -135,6 +134,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 
