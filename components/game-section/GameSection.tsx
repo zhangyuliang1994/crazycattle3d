@@ -1,8 +1,25 @@
+'use client';
+
+import { useState, useRef } from 'react';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import { content } from "@/config/content";
 import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils";
 
 export function GameSection() {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const toggleFullscreen = async () => {
+    if (!document.fullscreenElement) {
+      await containerRef.current?.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      await document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+
   return (
     <section className={cn(
       theme.gameSection.layout.section,
@@ -14,11 +31,14 @@ export function GameSection() {
       )}>
         {content.gameSection.title}
       </h2>
-      <div className={cn(
-        theme.gameSection.layout.container,
-        theme.gameSection.colors.container,
-        theme.gameSection.spacing.container
-      )}>
+      <div
+        ref={containerRef}
+        className={cn(
+          theme.gameSection.layout.container,
+          theme.gameSection.colors.container,
+          theme.gameSection.spacing.container
+        )}
+      >
         <iframe
           src={content.gameSection.game.url}
           className={theme.gameSection.layout.iframe}
@@ -26,6 +46,20 @@ export function GameSection() {
           title={content.gameSection.game.title}
           loading="lazy"
         />
+        <button
+          onClick={toggleFullscreen}
+          className={cn(
+            theme.gameSection.layout.fullscreenButton,
+            theme.gameSection.colors.fullscreenButton
+          )}
+          aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+        >
+          {isFullscreen ? (
+            <Minimize2 className="w-5 h-5" />
+          ) : (
+            <Maximize2 className="w-5 h-5" />
+          )}
+        </button>
       </div>
     </section>
   );

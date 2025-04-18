@@ -96,12 +96,14 @@ export const theme = {
   },
   gameSection: {
     colors: {
-      container: "bg-card"
+      container: "bg-card",
+      fullscreenButton: "bg-black/20 hover:bg-black/40 text-white"
     },
     layout: {
       section: "text-center",
-      container: "aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl",
-      iframe: "w-full h-full border-0"
+      container: "aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl relative",
+      iframe: "w-full h-full border-0",
+      fullscreenButton: "absolute top-2 right-2 p-2 rounded-lg transition-colors"
     },
     spacing: {
       section: "mb-16",
@@ -130,6 +132,7 @@ export const theme = {
     }
   }
 } as const;
+
 
 
 
