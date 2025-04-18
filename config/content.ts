@@ -58,51 +58,12 @@ export const content = {
     initialVotes: 15545
   },
   howToPlay: {
-    title: "How to Play",
-    steps: [
-      {
-        position: 1,
-        name: "Tap to Start",
-        text: "Tap the \"TAP TO START\" button at the bottom of the screen to start the game.",
-        image: "/assets/guides/blossom-game-howto-1.jpg",
-        imageAlt: "Blossom Game start screen showing TAP TO START button"
-      },
-      {
-        position: 2,
-        name: "Click Play",
-        text: "Click the 'Play Now' button to play.",
-        image: "/assets/guides/blossom-game-howto-2.jpg",
-        imageAlt: "Blossom Game play button interface"
-      },
-      {
-        position: 3,
-        name: "Gameplay Introduction",
-        text: "This is the gameplay introduction screen of the game, guiding players on how to play.",
-        image: "/assets/guides/blossom-game-howto-3.jpg",
-        imageAlt: "Blossom Game tutorial introduction screen"
-      },
-      {
-        position: 4,
-        name: "Tutorial Screen",
-        text: "This is a tutorial screen of the game.",
-        image: "/assets/guides/blossom-game-howto-4.jpg",
-        imageAlt: "Blossom Game detailed tutorial instructions"
-      },
-      {
-        position: 5,
-        name: "Level Selection",
-        text: "On the levels selection screen, tap the unlocked tile marked with the number \"1\" to start level 1.",
-        image: "/assets/guides/blossom-game-howto-5.jpg",
-        imageAlt: "Blossom Game level selection screen showing level 1"
-      },
-      {
-        position: 6,
-        name: "Playing Game",
-        text: "In the game screen, tap matching flower tiles according to the rules to eliminate them and complete level objectives.",
-        image: "/assets/guides/blossom-game-howto-6.jpg",
-        imageAlt: "Blossom Game gameplay screen showing flower matching mechanics"
-      }
-    ]
+    title: "How to Play Crazy Cattle 3D - Game Controls & Guide",
+    description: "Playing Crazy Cattle 3D online is easy: Use WASD keys for movement and mouse for precise sheep steering in this free browser game. The space bar triggers your special collision ability in Crazy Cattle 3D - master the timing for devastating impacts. Perfect your control over the sheep's momentum as you navigate through the 3D battle arena.\n\n" +
+      "Success in Crazy Cattle 3D multiplayer battles depends on mastering the physics-based momentum system. Strategically build speed by moving downhill in the 3D arena, then unleash powerful attacks or execute quick escapes. Crazy Cattle 3D's unique collision mechanics reward skillful timing - precisely angled hits send opponents flying off the map, while mistimed attacks leave your sheep exposed.\n\n" +
+      "Win more Crazy Cattle 3D matches by starting defensively - focus on survival and strategic positioning in the 3D battlefield. Study each arena's layout to discover prime attack positions and danger zones. After defeats in Crazy Cattle 3D, spectate top players to learn pro techniques - analyze their movement patterns and collision strategies. Keep practicing this free online physics game, and you'll soon master the art of sheep combat!",
+    image: "/assets/crazycattle3d-howto.jpg",
+    imageAlt: "Crazy Cattle 3D Game Guide - Controls, Physics, and Strategy Tutorial"
   },
   whatIs: {
     title: "Crazy Cattle 3D: Free Online Battle Game",
@@ -174,6 +135,9 @@ export const content = {
     }
   }
 } as const;
+
+
+
 
 
 

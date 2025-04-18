@@ -48,15 +48,15 @@ export const howToPlaySchema = {
   "inLanguage": "en",
   "image": {
     "@type": "ImageObject",
-    "url": content.howToPlay.steps[0].image
+    "url": content.howToPlay.image
   },
-  "step": content.howToPlay.steps.map(step => ({
+  "step": [{
     "@type": "HowToStep",
-    "position": step.position,
-    "name": step.name,
-    "text": step.text,
-    "image": step.image
-  }))
+    "position": "1",
+    "name": content.howToPlay.title,
+    "text": content.howToPlay.description,
+    "image": content.howToPlay.image
+  }]
 };
 
 export const generateRatingSchema = (rating: number, votes: number) => {
@@ -80,3 +80,4 @@ export const generateRatingSchema = (rating: number, votes: number) => {
     }
   };
 };
+

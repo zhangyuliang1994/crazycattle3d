@@ -44,19 +44,16 @@ export const theme = {
   howToPlay: {
     colors: {
       title: "text-foreground",
-      stepNumber: "bg-primary text-primary-foreground",
-      cardBorder: "border border-border",
       description: "text-muted-foreground"
     },
     layout: {
-      container: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-      card: "h-full",
-      imageContainer: "aspect-video overflow-hidden rounded-lg"
+      container: "grid grid-cols-1 lg:grid-cols-2 gap-8 items-center",
+      content: "prose prose-neutral dark:prose-invert max-w-none",
+      imageContainer: "rounded-lg overflow-hidden"
     },
     spacing: {
       section: "py-12",
-      title: "mb-8",
-      content: "p-6"
+      title: "mb-8"
     }
   },
   whatIs: {
@@ -133,6 +130,7 @@ export const theme = {
     }
   }
 } as const;
+
 
 
 

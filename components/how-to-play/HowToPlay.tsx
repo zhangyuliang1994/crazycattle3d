@@ -5,13 +5,10 @@ import { HowToPlayCard } from "./HowToPlayCard";
 import { howToPlaySchema } from "@/app/schema";
 
 export function HowToPlay() {
+  const paragraphs = content.howToPlay.description.split('\n\n');
+
   return (
     <section className={cn("mb-24", theme.howToPlay.spacing.section)} id="how-to-play">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToPlaySchema) }}
-      />
-
       <h2 className={cn(
         "text-3xl font-bold text-center",
         theme.howToPlay.spacing.title,
@@ -21,13 +18,26 @@ export function HowToPlay() {
       </h2>
 
       <div className={theme.howToPlay.layout.container}>
-        {content.howToPlay.steps.map((step) => (
-          <HowToPlayCard
-            key={step.position}
-            {...step}
+        <div className={theme.howToPlay.layout.content}>
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className={cn(
+              theme.howToPlay.colors.description,
+              "mb-4 last:mb-0"
+            )}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+        <div className={theme.howToPlay.layout.imageContainer}>
+          <img
+            src={content.howToPlay.image}
+            alt={content.howToPlay.imageAlt}
+            className="object-cover w-full h-full"
           />
-        ))}
+        </div>
       </div>
     </section>
   );
 }
+
+
