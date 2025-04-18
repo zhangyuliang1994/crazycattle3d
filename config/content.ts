@@ -105,8 +105,8 @@ export const content = {
     ]
   },
   whatIs: {
-    title: "Blossom: Free Unblocked Online Games",
-    description: "Blossom Games is your premier destination for free online gaming entertainment. Our platform offers a diverse collection of browser-based games that you can play instantly without any downloads or installations. From classic arcade games like Bubble Shooter to engaging puzzle adventures and fun social games like Love Tester, we provide endless entertainment for players of all ages. All our games are optimized for both desktop and mobile devices, ensuring you can enjoy gaming wherever you are.",
+    title: "Crazy Cattle 3D: Free Online Battle Game",
+    description: "Crazy Cattle 3D is an exciting physics-based battle game you can play right in your browser. Control your character through dynamic environments, master momentum-based movement, and compete to be the last one standing. No downloads needed - just pure entertainment with simple controls but challenging gameplay. Perfect for quick gaming sessions on any device with a modern browser.",
     logo: {
       src: "/assets/img/android-chrome-512x512.png",
       alt: "Blossom Games"
@@ -160,10 +160,10 @@ export const content = {
     ]
   },
   gameSection: {
-    title: "Welcome to Blossom Game",
+    title: "Crazy Cattle 3D",
     game: {
-      url: "https://html5.gamemonetize.com/ch0kbbr5cqadx8gghn8rj8t5jmsaxcke/",
-      title: "Love Tester Game"
+      url: "https://crazy-cattle3d.org/game/crazycattle3d/",
+      title: "crazycattle3d"
     }
   },
   otherGames: {
@@ -174,5 +174,6 @@ export const content = {
     }
   }
 } as const;
+
 
 

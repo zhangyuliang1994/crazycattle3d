@@ -1,6 +1,6 @@
 export const layout = {
   header: {
-    isVisible: true,
+    isVisible: false,
     maxWidth: "max-w-sm",
     searchEnabled: true,
     logoSize: "text-2xl",

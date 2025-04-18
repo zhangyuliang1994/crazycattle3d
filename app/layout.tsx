@@ -5,19 +5,19 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://blossom-game.com'),
-  title: 'Blossom Game | Free Online Unblocked | blossom-game.com',
-  description: 'Blossom Game, Play free daily flower connect. While not puzzles or Wordle, find similar brain-teasing fun. Simply match blooms—no wordplay, just colorful joy.',
+  metadataBase: new URL('https://crazycattle.cc'),
+  title: 'Crazy Cattle 3D Unblocked | Play Free Game | CrazyCattle.cc',
+  description: 'Play Crazy Cattle 3D unblocked online for free. Control crazy cattle in this 3D action game. No download required, start playing instantly in your browser!',
   openGraph: {
-    title: 'Blossom Games - Free Online Games | Play Without Download',
+    title: 'Crazy Cattle 3D Unblocked | Play Free Game | CrazyCattle.cc',
     description: 'Blossom Game, Play free daily flower connect',
     type: 'website',
-    url: 'https://blossom-game.com',
-    siteName: 'Blossom Game',
+    url: 'https://crazycattle.cc',
+    siteName: 'Crazy Cattle 3D',
     images: [
       {
         url: '/assets/guides/blossom-game-howto-2.jpg',
-        alt: 'Blossom Games - Free Online Games Screenshot',
+        alt: 'Crazy Cattle 3D Screenshot',
       }
     ],
     locale: 'en_US',
@@ -63,6 +63,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
 
 
