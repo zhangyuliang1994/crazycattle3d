@@ -5,22 +5,40 @@ import { content } from "@/config/content";
 import { generateRatingSchema } from "@/app/schema";
 
 export function Rating() {
-  // 明确指定类型为 number，而不是让 TypeScript 推断为字面量类型
   const [rating, setRating] = useState<number>(content.rating.initialRating);
-  const [votes, setVotes] = useState<number>(content.rating.initialVotes);
+  const [votes, setVotes] = useState<number>(0);
   const [userRating, setUserRating] = useState(0);
   const [hasVoted, setHasVoted] = useState(false);
 
   useEffect(() => {
+    // 计算基于日期的动态初始votes
+    const calculateInitialVotes = () => {
+      const baseVotes = 146; // 基础票数
+      const dailyIncrease = 101; // 每日增加票数
+      const startDate = new Date('2025-04-18').getTime(); // 新的起始日期
+      const today = new Date().getTime();
+      const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+      // 如果当前日期在起始日期之前，返回基础票数
+      if (daysDiff < 0) {
+        return baseVotes;
+      }
+
+      return baseVotes + (dailyIncrease * daysDiff);
+    };
+
     const savedRating = localStorage.getItem('globalRating');
-    const savedVotes = localStorage.getItem('totalVotes');
     const savedUserRating = localStorage.getItem('userRating');
     const savedHasVoted = localStorage.getItem('hasVoted');
+    const savedTotalVotes = localStorage.getItem('totalVotes');
+
+    // 如果有保存的总票数就使用保存的，否则使用计算的初始值
+    const initialVotes = savedTotalVotes ? parseInt(savedTotalVotes) : calculateInitialVotes();
 
     if (savedRating) setRating(parseFloat(savedRating));
-    if (savedVotes) setVotes(parseInt(savedVotes));
     if (savedUserRating) setUserRating(parseInt(savedUserRating));
     if (savedHasVoted) setHasVoted(savedHasVoted === 'true');
+    setVotes(initialVotes);
   }, []);
 
   const handleVote = (star: number) => {
@@ -41,6 +59,18 @@ export function Rating() {
     }
   };
 
+  // 添加重置功能
+  const handleReset = () => {
+    localStorage.removeItem('hasVoted');
+    localStorage.removeItem('userRating');
+    localStorage.removeItem('globalRating');
+    localStorage.removeItem('totalVotes');
+    setHasVoted(false);
+    setUserRating(0);
+    setRating(content.rating.initialRating);
+    setVotes(146); // 使用基础票数
+  };
+
   return (
     <section className="mb-16" id="rating">
       <script
@@ -53,6 +83,15 @@ export function Rating() {
       <div className="container mx-auto">
         <div className="bg-[#fff2cb] rounded-lg p-6 mb-6">
           <h2 className="text-3xl font-bold text-center">{content.rating.title}</h2>
+          {/* 添加重置按钮 */}
+          <div className="text-center mt-2">
+            <button hidden
+              onClick={handleReset}
+              className="text-sm text-gray-500 hover:text-gray-700"
+            >
+              Reset
+            </button>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex items-center space-x-2">
@@ -96,3 +135,6 @@ export function Rating() {
     </section>
   );
 }
+
+
+

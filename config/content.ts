@@ -52,10 +52,10 @@ export const content = {
     }
   },
   rating: {
-    title: "Rate Blossom Games",
+    title: "Rate CrazyCattle3D",
     votes: "votes",
     initialRating: 4.8,
-    initialVotes: 15545
+    initialVotes: 146
   },
   howToPlay: {
     title: "How to Play Crazy Cattle 3D - Game Controls & Guide",
@@ -91,32 +91,32 @@ export const content = {
     ]
   },
   faq: {
-    title: "FAQ",
+    title: "Frequently Asked Questions",
     items: [
       {
-        value: "item-1",
-        question: "Are all games really free to play?",
-        answer: "Yes! All games on Blossom Games are 100% free to play. We believe in providing entertainment without any cost to our players."
+        value: "new-player",
+        question: "How difficult is Crazy Cattle 3D for new players?",
+        answer: "Crazy Cattle 3D is designed with an intuitive physics-based control system that's easy to grasp but challenging to master. The game starts with basic movement mechanics, allowing new players to enjoy immediate action while gradually discovering advanced techniques. Our tutorial mode helps you understand momentum-based gameplay, and the forgiving respawn system encourages experimentation without frustration."
       },
       {
-        value: "item-2",
-        question: "Do I need to create an account?",
-        answer: "No account is needed! Just visit our website and start playing instantly. We keep it simple and hassle-free."
+        value: "technical-requirements",
+        question: "What are the technical requirements for smooth Crazy Cattle 3D gameplay?",
+        answer: "For the best Crazy Cattle 3D experience, we recommend using a modern browser (Chrome, Firefox, or Edge) and a stable internet connection. The game's physics engine is optimized to run smoothly on most devices, but for best performance, ensure your device has at least 4GB RAM and updated graphics drivers. If you experience any slowdown, try adjusting the quality settings in the game menu."
       },
       {
-        value: "item-3",
-        question: "Which devices are supported?",
-        answer: "Our games work on all modern devices including smartphones, tablets, laptops, and desktop computers. Just make sure you have an updated browser."
+        value: "game-modes",
+        question: "What game modes are available in Crazy Cattle 3D?",
+        answer: "Crazy Cattle 3D currently features an exciting single-player arena mode where you compete against intelligent AI opponents. Each match offers a unique experience thanks to our dynamic physics system and varied arena layouts. Practice mode lets you perfect your skills without pressure, while Challenge mode puts your abilities to the test with increasingly difficult scenarios and objectives."
       },
       {
-        value: "item-4",
-        question: "How often are new games added?",
-        answer: "We regularly update our collection with new games. Check back often to discover fresh entertainment!"
+        value: "comfort-settings",
+        question: "How can I adjust Crazy Cattle 3D for a more comfortable gaming experience?",
+        answer: "Crazy Cattle 3D includes several comfort options to enhance your gaming experience. You can adjust camera sensitivity, enable smooth camera transitions, and customize control responsiveness. We recommend starting with default settings and gradually adjusting them to match your play style. The game also features visual indicators for better spatial awareness during intense physics-based battles."
       },
       {
-        value: "item-5",
-        question: "What if a game isn't loading?",
-        answer: "Try refreshing your browser, clearing cache, or using a different browser. If issues persist, contact us through our social media channels."
+        value: "winning-tactics",
+        question: "What tactics help secure victories in Crazy Cattle 3D?",
+        answer: "Mastering Crazy Cattle 3D requires understanding of momentum and timing. Start by learning the arena layouts and identifying high-ground advantages. Use the environment to build speed, and practice the signature 'bounce boost' technique for quick escapes. Advanced players can master the 'precision impact' strategy, where carefully timed collisions can send opponents off balance. Remember, strategic positioning often matters more than aggressive charging."
       }
     ]
   },
@@ -135,6 +135,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 
