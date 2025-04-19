@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://crazy-cattle.net/sitemap.xml
-
-
