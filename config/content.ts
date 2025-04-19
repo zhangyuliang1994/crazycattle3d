@@ -21,8 +21,8 @@ export const content = {
     quickLinks: {
       title: "Quick Links",
       links: [
-        { text: "AI Image", href: "https://aiimage.pics" },
-        { text: "Blue Prince GUide", href: "https://blue-prince.net" },
+        { text: "Blue Prince Guide", href: "https://blue-prince.net" },
+        { text: "AI Image Generator", href: "https://aiimage.pics" },
       ]
     },
     social: {
@@ -122,7 +122,7 @@ export const content = {
   gameSection: {
     title: "Crazy Cattle 3D",
     game: {
-      url: "https://crazy-cattle3d.org/game/crazycattle3d/",
+      url: "https://crazycattle3d.io/crazy-cattle-3d.embed",
       title: "crazycattle3d"
     }
   },

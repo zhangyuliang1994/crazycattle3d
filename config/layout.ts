@@ -9,7 +9,7 @@ export const layout = {
     isVisible: true,
     sections: {
       about: true,
-      quickLinks: false,
+      quickLinks: true,
       social: true,
       legal: true,
     }
