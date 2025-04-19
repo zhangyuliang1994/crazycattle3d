@@ -1,6 +1,6 @@
 export const content = {
   header: {
-    title: "Blossom Games",
+    title: "Crazy Cattle 3D",
     search: {
       placeholder: "Find your next favorite game...",
       ariaLabel: "Search games",
@@ -34,7 +34,7 @@ export const content = {
         },
         {
           icon: "Twitter",
-          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazy-cattle.net')}&hashtags=BlossomGame,PuzzleGames`
+          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazy-cattle.net')}&hashtags=CrazyCattle,Games`
         }
       ]
     },
@@ -46,7 +46,7 @@ export const content = {
       ]
     },
     copyright: {
-      text: "© {year} Blossom Games. All rights reserved.",
+      text: "© {year} Crazy Cattle 3D. All rights reserved.",
       subText: "All games on this platform are free to play and do not require downloads."
     }
   },
@@ -69,7 +69,7 @@ export const content = {
     description: "Crazy Cattle 3D is an exciting physics-based battle game you can play right in your browser. Control your character through dynamic environments, master momentum-based movement, and compete to be the last one standing. No downloads needed - just pure entertainment with simple controls but challenging gameplay. Perfect for quick gaming sessions on any device with a modern browser.",
     logo: {
       src: "/assets/img/android-chrome-512x512.png",
-      alt: "Blossom Games"
+      alt: "Crazy Cattle 3D"
     },
     links: [
       {
@@ -134,6 +134,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 

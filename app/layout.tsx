@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blossom Games - Free Online Games',
-    description: 'Play free online games without download at Blossom Games',
+    title: 'Crazy Cattle 3D - Free Online Game',
+    description: 'Play free online game without download at Crazy Cattle 3D',
   },
   robots: {
     index: true,
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://blossom-game.com" />
+        <link rel="canonical" href="https://crazy-cattle.net" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
@@ -63,6 +63,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

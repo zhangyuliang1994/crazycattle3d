@@ -11,7 +11,7 @@ export const generateGameSchema = (game: {
     "playMode": "SinglePlayer",
     "applicationCategory": "Browser Game",
     "gamePlatform": ["Web Browser"],
-    "url": `https://blossom-game.com${game.url}`,
+    "url": `https://crazy-cattle.net${game.url}`,
     "inLanguage": "en",
     "offers": {
       "@type": "Offer",
@@ -25,14 +25,14 @@ export const generateGameSchema = (game: {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Blossom Games",
-  "description": "Free online games to play instantly without download. Your blooming garden of entertainment.",
-  "url": "https://blossom-game.com",
+  "name": "Crazy Cattle 3D",
+  "description": "Free online games to play instantly without download.",
+  "url": "https://crazy-cattle.net",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://blossom-game.com/search?q={search_term_string}"
+      "urlTemplate": "https://crazy-cattle.net/search?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }
@@ -44,7 +44,7 @@ export const howToPlaySchema = {
   "@context": "http://schema.org",
   "@type": "HowTo",
   "name": content.howToPlay.title,
-  "url": "https://blossomgames.example.com",
+  "url": "https://crazy-cattle.net",
   "inLanguage": "en",
   "image": {
     "@type": "ImageObject",
@@ -63,7 +63,7 @@ export const generateRatingSchema = (rating: number, votes: number) => {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Blossom Games",
+    "name": "Crazy Cattle 3D",
     "applicationCategory": "GameApplication",
     "operatingSystem": "Any",
     "aggregateRating": {
@@ -80,4 +80,5 @@ export const generateRatingSchema = (rating: number, votes: number) => {
     }
   };
 };
+
 
