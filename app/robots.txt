@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://blossom-game.com/sitemap.xml
+Sitemap: https://crazy-cattle.net/sitemap.xml
+
 

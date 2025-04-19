@@ -5,14 +5,14 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://crazycattle.cc'),
-  title: 'Crazy Cattle 3D Unblocked | Play Free Game | CrazyCattle.cc',
+  metadataBase: new URL('https://crazy-cattle.net'),
+  title: 'Crazy Cattle 3D Unblocked | Play Free Game | Crazy-Cattle.net',
   description: 'Play Crazy Cattle 3D unblocked online for free. Control crazy cattle in this 3D action game. No download required, start playing instantly in your browser!',
   openGraph: {
-    title: 'Crazy Cattle 3D Unblocked | Play Free Game | CrazyCattle.cc',
+    title: 'Crazy Cattle 3D Unblocked | Play Free Game | Crazy-Cattle.net',
     description: 'Blossom Game, Play free daily flower connect',
     type: 'website',
-    url: 'https://crazycattle.cc',
+    url: 'https://crazy-cattle.net',
     siteName: 'Crazy Cattle 3D',
     images: [
       {
@@ -63,6 +63,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

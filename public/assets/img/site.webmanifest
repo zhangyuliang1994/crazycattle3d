@@ -1,6 +1,6 @@
 {
-    "name": "Blossom Games",
-    "short_name": "Blossom",
+    "name": "Crazy Crazy 3D",
+    "short_name": "Craze3",
     "icons": [
       {
         "src": "/assets/img/android-chrome-192x192.png",
@@ -13,8 +13,9 @@
         "type": "image/png"
       }
     ],
-    "start_url": "https://blossom-game.com",
+    "start_url": "https://crazy-cattle.net",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
   }
+

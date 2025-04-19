@@ -26,15 +26,15 @@ export const content = {
       ]
     },
     social: {
-      title: "Share",  // 改为 Share 而不是 Follow Us
+      title: "Share",
       links: [
         {
           icon: "Facebook",
-          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent('Crazy Cattle 3D')}&u=${encodeURIComponent('https://crazycattle.cc')}`
+          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent('Crazy Cattle 3D')}&u=${encodeURIComponent('https://crazy-cattle.net')}`
         },
         {
           icon: "Twitter",
-          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazycattle.cc')}&hashtags=BlossomGame,PuzzleGames`
+          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazy-cattle.net')}&hashtags=BlossomGame,PuzzleGames`
         }
       ]
     },
@@ -134,6 +134,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 
