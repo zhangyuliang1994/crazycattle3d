@@ -99,7 +99,7 @@ const TermsOfService = () => {
             If you have any questions about these Terms of Service, please contact us:
           </p>
           <p className="mt-2">
-            By email: support@blossom-game.com
+            By email: support@crazy-cattle.net
           </p>
         </section>
       </div>

@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, please contact us:
           </p>
           <p className="mt-2">
-            By email: support@blossom-game.com
+            By email: support@crazy-cattle.net
           </p>
         </section>
       </div>
@@ -118,3 +118,4 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
