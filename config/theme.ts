@@ -1,19 +1,24 @@
 export const theme = {
   header: {
     colors: {
-      // 更新背景样式，添加渐变和磨砂玻璃效果
-      background: "bg-gradient-to-b from-background/98 to-background/90",
-      // 更新边框使其更微妙
-      border: "border-b border-border/40",
-      text: "text-foreground",
-      hover: "hover:text-primary",
+      // 方案1：温暖柔和的玫瑰金渐变
+      background: "bg-gradient-to-b from-rose-100/90 via-rose-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+      
+      // 方案2：高级灰调渐变
+      // background: "bg-gradient-to-b from-slate-200/90 via-gray-100/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+      
+      // 方案3：温暖米色渐变
+      // background: "bg-gradient-to-b from-amber-50/90 via-orange-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+
+      border: "border-b border-white/10",
+      text: "text-slate-800 dark:text-white/90",
+      hover: "hover:text-slate-900 dark:hover:text-white hover:scale-105 transition-all",
     },
     layout: {
       height: "h-16",
       position: "sticky top-0",
       zIndex: "z-50",
-      // 增强磨砂玻璃效果，添加阴影
-      blur: "backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm",
+      blur: "backdrop-blur-sm shadow-lg shadow-black/5",
       logo: {
         wrapper: "flex items-center gap-4",
         image: "object-contain",
@@ -143,6 +148,12 @@ export const theme = {
     }
   }
 } as const;
+
+
+
+
+
+
 
 
 
