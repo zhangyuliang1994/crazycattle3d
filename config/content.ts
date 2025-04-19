@@ -10,8 +10,10 @@ export const content = {
     },
     navigation: {
       links: [
-        { text: "Home", href: "/" },
-        // 可以轻松添加更多导航链接
+        { text: "Play Game", href: "#game-section" },
+        { text: "About", href: "#what-is" },
+        { text: "How to Play", href: "#how-to-play" },
+        { text: "FAQ", href: "#faq" },
       ]
     }
   },
@@ -136,6 +138,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 

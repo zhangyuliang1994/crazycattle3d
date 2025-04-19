@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: `${siteConfig.name} Unblocked | Play Free Game | ${siteConfig.domain}`,
+  title: `${siteConfig.name} | Unblocked Free Game | ${siteConfig.domain}`,
   description: siteConfig.description,
   openGraph: {
     title: `${siteConfig.name} Unblocked | Play Free Game | ${siteConfig.domain}`,

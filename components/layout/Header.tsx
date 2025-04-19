@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { theme } from "@/config/theme";
 import { content } from "@/config/content";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 interface HeaderProps {
   searchQuery: string;
@@ -31,43 +29,83 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
     theme.header.spacing.container,
     "flex",
     theme.header.layout.height,
-    "items-center justify-between"
+    "items-center justify-between",
+    layout.header.container.padding
   );
 
   return (
     <header className={headerClassName}>
       <div className={containerClassName}>
-        <nav className={cn("flex items-center", theme.header.spacing.nav)}>
+        {/* 左侧 Logo 和标题 */}
+        <div className={theme.header.layout.logo.wrapper}>
+          <img
+            src={layout.header.logo.src}
+            alt={content.header.title}
+            className={cn(
+              layout.header.logo.size,
+              theme.header.layout.logo.image
+            )}
+          />
           <Link 
             href="/" 
-            className={cn(layout.header.logoSize, "font-bold", theme.header.colors.text)}
+            className={cn(
+              layout.header.logoSize,
+              "font-bold",
+              theme.header.colors.text,
+              "hover:opacity-90 transition-opacity"
+            )}
           >
             <h1>{content.header.title}</h1>
           </Link>
-        </nav>
-        {layout.header.searchEnabled && (
-          <form 
-            onSubmit={onSearch} 
-            className={cn("flex", layout.header.maxWidth, "items-center", theme.header.spacing.search)}
-          >
-            <Input
-              type="search"
-              placeholder={content.header.search.placeholder}
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              aria-label={content.header.search.ariaLabel}
-            />
-            <Button 
-              type="submit" 
-              size="icon" 
-              aria-label={content.header.search.buttonAriaLabel}
+        </div>
+
+        {/* 右侧导航和搜索 */}
+        <div className={theme.header.layout.nav.wrapper}>
+          <nav className={theme.header.layout.nav.list}>
+            {content.header.navigation.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium transition-colors",
+                  theme.header.colors.text,
+                  "hover:text-primary"
+                )}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(link.href)?.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
+              >
+                {link.text}
+              </a>
+            ))}
+          </nav>
+
+          {layout.header.searchEnabled && (
+            <form 
+              onSubmit={onSearch} 
+              className={cn("flex", layout.header.maxWidth, "items-center", theme.header.spacing.search)}
             >
-              <Search className="h-4 w-4" />
-            </Button>
-          </form>
-        )}
+              <Input
+                type="search"
+                placeholder={content.header.search.placeholder}
+                value={searchQuery}
+                onChange={(e) => onSearchChange(e.target.value)}
+                aria-label={content.header.search.ariaLabel}
+              />
+              <Button 
+                type="submit" 
+                size="icon" 
+                aria-label={content.header.search.buttonAriaLabel}
+              >
+                <Search className="h-4 w-4" />
+              </Button>
+            </form>
+          )}
+        </div>
       </div>
     </header>
   );
 }
-

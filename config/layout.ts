@@ -1,9 +1,16 @@
 export const layout = {
   header: {
-    isVisible: false,
+    isVisible: true,
     maxWidth: "max-w-sm",
-    searchEnabled: true,
+    searchEnabled: false,
     logoSize: "text-2xl",
+    container: {
+      padding: "px-4 md:px-8",
+    },
+    logo: {
+      src: "/assets/img/favicon-32x32.png",
+      size: "w-8 h-8",
+    }
   },
   footer: {
     isVisible: true,
@@ -38,4 +45,6 @@ export const layout = {
     }
   }
 } as const;
+
+
 

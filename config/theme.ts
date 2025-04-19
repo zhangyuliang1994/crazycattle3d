@@ -1,8 +1,10 @@
 export const theme = {
   header: {
     colors: {
-      background: "bg-background/95",
-      border: "border-b",
+      // 更新背景样式，添加渐变和磨砂玻璃效果
+      background: "bg-gradient-to-b from-background/98 to-background/90",
+      // 更新边框使其更微妙
+      border: "border-b border-border/40",
       text: "text-foreground",
       hover: "hover:text-primary",
     },
@@ -10,7 +12,16 @@ export const theme = {
       height: "h-16",
       position: "sticky top-0",
       zIndex: "z-50",
-      blur: "backdrop-blur supports-[backdrop-filter]:bg-background/60",
+      // 增强磨砂玻璃效果，添加阴影
+      blur: "backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm",
+      logo: {
+        wrapper: "flex items-center gap-4",
+        image: "object-contain",
+      },
+      nav: {
+        wrapper: "flex items-center gap-6 mr-4",
+        list: "hidden md:flex items-center space-x-8",
+      }
     },
     spacing: {
       container: "container",
@@ -132,6 +143,8 @@ export const theme = {
     }
   }
 } as const;
+
+
 
 
 
