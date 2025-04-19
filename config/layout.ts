@@ -12,6 +12,11 @@ export const layout = {
       size: "w-12 h-12", // 增加到 48x48 显示尺寸
     }
   },
+  gameSection: {
+    isVisible: {
+      title: false  // 控制游戏区标题是否显示
+    }
+  },
   footer: {
     isVisible: true,
     sections: {
@@ -45,6 +50,7 @@ export const layout = {
     }
   }
 } as const;
+
 
 
 

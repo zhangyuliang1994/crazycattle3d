@@ -8,7 +8,14 @@ export function HowToPlay() {
   const paragraphs = content.howToPlay.description.split('\n\n');
 
   return (
-    <section className={cn("mb-24", theme.howToPlay.spacing.section)} id="how-to-play">
+    <section 
+      id="how-to-play" 
+      className={cn(
+        "mb-24",
+        theme.howToPlay.spacing.section,
+        theme.layout.section.scrollMargin  // 添加滚动偏移
+      )}
+    >
       <h2 className={cn(
         "text-3xl font-bold text-center",
         theme.howToPlay.spacing.title,
@@ -39,5 +46,6 @@ export function HowToPlay() {
     </section>
   );
 }
+
 
 

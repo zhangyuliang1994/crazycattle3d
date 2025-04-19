@@ -11,7 +11,13 @@ import {
 
 export function FAQ() {
   return (
-    <section className={theme.faq.spacing.section} id={layout.faq.sectionId}>
+    <section 
+      id="faq" 
+      className={cn(
+        theme.faq.layout.section,
+        theme.layout.section.scrollMargin  // 添加滚动偏移
+      )}
+    >
       <h2 className={cn(theme.faq.typography.title, theme.faq.spacing.title)}>
         {content.faq.title}
       </h2>

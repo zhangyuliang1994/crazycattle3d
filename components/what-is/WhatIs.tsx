@@ -13,7 +13,13 @@ const IconMap = {
 
 export function WhatIs() {
   return (
-    <section className={cn(theme.whatIs.spacing.section)} id={layout.whatIs.sectionId}>
+    <section 
+      id="what-is" 
+      className={cn(
+        theme.whatIs.layout.section,
+        theme.layout.section.scrollMargin
+      )}
+    >
       <div className={theme.whatIs.layout.container}>
         <div className={cn(theme.whatIs.colors.card, theme.whatIs.layout.card, theme.whatIs.spacing.card)}>
           <div className={layout.whatIs.grid.columns}>
@@ -70,6 +76,7 @@ export function WhatIs() {
     </section>
   );
 }
+
 
 
 

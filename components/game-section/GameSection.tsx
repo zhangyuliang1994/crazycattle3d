@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
 import { content } from "@/config/content";
 import { theme } from "@/config/theme";
+import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
 
 export function GameSection() {
@@ -21,16 +22,21 @@ export function GameSection() {
   };
 
   return (
-    <section className={cn(
-      theme.gameSection.layout.section,
-      theme.gameSection.spacing.section
-    )}>
-      <h2 className={cn(
-        theme.gameSection.typography.title,
-        theme.gameSection.spacing.title
-      )}>
-        {content.gameSection.title}
-      </h2>
+    <section
+      id="game-section"
+      className={cn(
+        theme.gameSection.layout.section,
+        theme.layout.section.scrollMargin
+      )}
+    >
+      {layout.gameSection.isVisible.title && (
+        <h2 className={cn(
+          theme.gameSection.typography.title,
+          theme.gameSection.spacing.title
+        )}>
+          {content.gameSection.title}
+        </h2>
+      )}
       <div
         ref={containerRef}
         className={cn(
@@ -64,3 +70,7 @@ export function GameSection() {
     </section>
   );
 }
+
+
+
+

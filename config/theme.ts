@@ -54,7 +54,8 @@ export const theme = {
   },
   layout: {
     section: {
-      spacing: "mb-24" // 使用更大的间距 mb-24 (6rem) 替代原来的 mb-16 (4rem)
+      spacing: "mb-24", // 使用更大的间距 mb-24 (6rem) 替代原来的 mb-16 (4rem)
+      scrollMargin: "scroll-mt-16" // 添加统一的滚动偏移量
     }
   },
   howToPlay: {
@@ -148,6 +149,7 @@ export const theme = {
     }
   }
 } as const;
+
 
 
 
