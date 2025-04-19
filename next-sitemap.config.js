@@ -11,7 +11,7 @@ module.exports = {
     let priority = 0.7;
     let changefreq = 'monthly';
 
-    if (path === '') {
+    if (path === '/' || path === '') {  // 修改这里，同时检查 '/' 和 ''
       priority = 1.0;
       changefreq = 'daily';
     } else if (path === '/privacy-policy' || path === '/terms-of-service') {
@@ -28,3 +28,4 @@ module.exports = {
     }
   },
 }
+
