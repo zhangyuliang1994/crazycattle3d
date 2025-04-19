@@ -1,6 +1,8 @@
+import { siteConfig } from "./site";
+
 export const content = {
   header: {
-    title: "Crazy Cattle 3D",
+    title: siteConfig.name,
     search: {
       placeholder: "Find your next favorite game...",
       ariaLabel: "Search games",
@@ -16,7 +18,7 @@ export const content = {
   footer: {
     about: {
       title: "About",
-      description: "Play Crazy Cattle 3D - a free physics-based battle game right in your browser. No downloads required.",
+      description: `Play ${siteConfig.name} - a free physics-based battle game right in your browser. No downloads required.`,
     },
     quickLinks: {
       title: "Quick Links",
@@ -30,11 +32,11 @@ export const content = {
       links: [
         {
           icon: "Facebook",
-          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent('Crazy Cattle 3D')}&u=${encodeURIComponent('https://crazy-cattle.net')}`
+          href: `https://www.facebook.com/sharer.php?t=${encodeURIComponent(siteConfig.name)}&u=${encodeURIComponent(siteConfig.url)}`
         },
         {
           icon: "Twitter",
-          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent('Crazy Cattle 3D')}&url=${encodeURIComponent('https://crazy-cattle.net')}&hashtags=CrazyCattle,Games`
+          href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteConfig.name)}&url=${encodeURIComponent(siteConfig.url)}&hashtags=${siteConfig.social.twitter},Games`
         }
       ]
     },
@@ -134,6 +136,7 @@ export const content = {
     }
   }
 } as const;
+
 
 
 

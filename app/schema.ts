@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 export const generateGameSchema = (game: {
   title: string;
   description: string;
@@ -11,7 +13,7 @@ export const generateGameSchema = (game: {
     "playMode": "SinglePlayer",
     "applicationCategory": "Browser Game",
     "gamePlatform": ["Web Browser"],
-    "url": `https://crazy-cattle.net${game.url}`,
+    "url": `${siteConfig.url}${game.url}`,
     "inLanguage": "en",
     "offers": {
       "@type": "Offer",
@@ -25,14 +27,14 @@ export const generateGameSchema = (game: {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Crazy Cattle 3D",
-  "description": "Free online games to play instantly without download.",
-  "url": "https://crazy-cattle.net",
+  "name": siteConfig.name,
+  "description": siteConfig.description,
+  "url": siteConfig.url,
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://crazy-cattle.net/search?q={search_term_string}"
+      "urlTemplate": `${siteConfig.url}/search?q={search_term_string}`
     },
     "query-input": "required name=search_term_string"
   }
@@ -80,5 +82,6 @@ export const generateRatingSchema = (rating: number, votes: number) => {
     }
   };
 };
+
 
 

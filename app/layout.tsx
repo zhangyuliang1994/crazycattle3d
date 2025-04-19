@@ -1,23 +1,24 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { siteConfig } from "@/config/site";
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://crazy-cattle.net'),
-  title: 'Crazy Cattle 3D Unblocked | Play Free Game | Crazy-Cattle.net',
-  description: 'Play Crazy Cattle 3D unblocked online for free. Control crazy cattle in this 3D action game. No download required, start playing instantly in your browser!',
+  metadataBase: new URL(siteConfig.url),
+  title: `${siteConfig.name} Unblocked | Play Free Game | ${siteConfig.domain}`,
+  description: siteConfig.description,
   openGraph: {
-    title: 'Crazy Cattle 3D Unblocked | Play Free Game | Crazy-Cattle.net',
-    description: 'Blossom Game, Play free daily flower connect',
+    title: `${siteConfig.name} Unblocked | Play Free Game | ${siteConfig.domain}`,
+    description: siteConfig.description,
     type: 'website',
-    url: 'https://crazy-cattle.net',
-    siteName: 'Crazy Cattle 3D',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     images: [
       {
-        url: '/assets/guides/blossom-game-howto-2.jpg',
-        alt: 'Crazy Cattle 3D Screenshot',
+        url: siteConfig.images.og,
+        alt: `${siteConfig.name} Screenshot`,
       }
     ],
     locale: 'en_US',
@@ -48,21 +49,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://crazy-cattle.net" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
-        <link rel="manifest" href="/assets/img/site.webmanifest" />
-        <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5" />
-        <link rel="shortcut icon" href="/assets/img/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="msapplication-config" content="/assets/img/browserconfig.xml" />
-        <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href={siteConfig.url} />
+        <link rel="apple-touch-icon" sizes="180x180" href={siteConfig.images.icon.apple} />
+        <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.images.icon.favicon32} />
+        <link rel="icon" type="image/png" sizes="16x16" href={siteConfig.images.icon.favicon16} />
+        <link rel="manifest" href={siteConfig.metadata.manifestPath} />
+        <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" />
+        <link rel="shortcut icon" href={siteConfig.images.icon.favicon} />
+        <meta name="theme-color" content={siteConfig.metadata.themeColor} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
 }
+
 
 
 

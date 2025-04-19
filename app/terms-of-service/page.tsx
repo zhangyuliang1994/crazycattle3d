@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Terms of Service - Blossom Games',
+  title: 'Terms of Service - Crazy Cattle 3D',
   description: 'Terms of Service for Blossom Games - Please read these terms carefully before using our service.',
   robots: {
     index: true,
@@ -108,3 +108,4 @@ const TermsOfService = () => {
 };
 
 export default TermsOfService;
+
