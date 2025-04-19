@@ -4,6 +4,7 @@ import { theme } from "@/config/theme";
 import { content } from "@/config/content";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 const SocialIcons: Record<string, LucideIcon> = {
   Facebook,
@@ -126,7 +127,7 @@ export function Footer() {
         {/* Copyright Section */}
         <div className="mt-8 pt-8 border-t">
           <div className={cn("text-center text-sm", theme.footer.colors.mutedText)}>
-            © {new Date().getFullYear()} Blossom Games. All rights reserved.
+            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </div>
           <div className={cn("text-center text-xs mt-2", theme.footer.colors.mutedText)}>
             All games on this platform are free to play and do not require downloads.
@@ -136,3 +137,4 @@ export function Footer() {
     </footer>
   );
 }
+

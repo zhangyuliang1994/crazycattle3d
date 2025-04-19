@@ -2,7 +2,7 @@ import React from 'react';
 
 export const metadata = {
   title: 'Privacy Policy - Crazy Cattle 3D',
-  description: 'Privacy Policy for Blossom Games - Learn how we collect, use, and protect your information.',
+  description: 'Privacy Policy - Learn how we collect, use, and protect your information.',
   robots: {
     index: true,
     follow: true,
@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
           <p>
-            Welcome to Blossom Games. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data when you visit our website and tell you about your privacy rights.
+            Welcome to our website. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data when you visit our website and tell you about your privacy rights.
           </p>
         </section>
 
