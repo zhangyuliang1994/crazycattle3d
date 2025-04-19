@@ -15,7 +15,8 @@ export function FAQ() {
       id="faq" 
       className={cn(
         theme.faq.layout.section,
-        theme.layout.section.scrollMargin  // 添加滚动偏移
+        theme.faq.spacing.section,
+        theme.layout.section.scrollMargin
       )}
     >
       <h2 className={cn(theme.faq.typography.title, theme.faq.spacing.title)}>
@@ -36,3 +37,4 @@ export function FAQ() {
     </section>
   );
 }
+

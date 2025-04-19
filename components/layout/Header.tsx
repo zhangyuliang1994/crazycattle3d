@@ -6,6 +6,9 @@ import { content } from "@/config/content";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 interface HeaderProps {
   searchQuery: string;
@@ -109,3 +112,4 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
     </header>
   );
 }
+
