@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { siteConfig } from "@/config/site";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -57,17 +58,22 @@ export default function RootLayout({
         <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" />
         <link rel="shortcut icon" href={siteConfig.images.icon.favicon} />
         <meta name="theme-color" content={siteConfig.metadata.themeColor} />
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-46C0JN25YJ`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-46C0JN25YJ');
+          `}
+        </Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
 }
-
-
-
-
-
-
-
-
-
