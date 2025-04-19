@@ -8,19 +8,19 @@ export function Rating() {
   const [rating, setRating] = useState<number>(content.rating.initialRating);
   const [userRating, setUserRating] = useState(0);
   const [hasVoted, setHasVoted] = useState(false);
-  const [votes, setVotes] = useState<number>(content.rating.initialVotes); // 使用配置中的固定初始值
 
   const calculateInitialVotes = () => {
-    const baseVotes = content.rating.initialVotes; // 使用配置中的值
-    const startDate = new Date('2025-04-20').getTime();
+    const baseVotes = 146;
+    const startDate = new Date('2025-04-20').getTime(); // 改回原来的日期
     const today = new Date().getTime();
     const daysDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
     if (daysDiff < 0) return baseVotes;
 
+    // 使用日期作为种子来生成确定性的"随机"值
     const seed = daysDiff + (new Date().getMonth() * 100);
     const pseudoRandom = Math.sin(seed) * 10000;
-    const randomValue = (pseudoRandom - Math.floor(pseudoRandom)) * 0.1 + 0.95;
+    const randomValue = (pseudoRandom - Math.floor(pseudoRandom)) * 0.1 + 0.95; // 0.95-1.05范围
 
     const growthFactor = Math.log1p(daysDiff) * 1.5;
     const baseIncrease = Math.floor(growthFactor * 50);
@@ -32,13 +32,13 @@ export function Rating() {
     return Math.max(baseVotes, Math.floor(baseVotes + variation * weekendMultiplier));
   };
 
+  const initialCalculatedVotes = calculateInitialVotes();
+  const [votes, setVotes] = useState<number>(initialCalculatedVotes);
+
   useEffect(() => {
     const savedTotalVotes = localStorage.getItem('totalVotes');
     if (savedTotalVotes) {
       setVotes(parseInt(savedTotalVotes));
-    } else {
-      const calculatedVotes = calculateInitialVotes();
-      setVotes(calculatedVotes);
     }
   }, []);
 
@@ -137,7 +137,6 @@ export function Rating() {
     </section>
   );
 }
-
 
 
 
