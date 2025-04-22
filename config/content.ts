@@ -69,29 +69,15 @@ export const content = {
     imageAlt: "Crazy Cattle 3D Game Guide - Controls, Physics, and Strategy Tutorial"
   },
   whatIs: {
-    title: "Crazy Cattle 3D: Free Online Battle Game",
-    description: "Crazy Cattle 3D is an exciting physics-based battle game you can play right in your browser. Control your character through dynamic environments, master momentum-based movement, and compete to be the last one standing. No downloads needed - just pure entertainment with simple controls but challenging gameplay. Perfect for quick gaming sessions on any device with a modern browser.",
+    title: "Everything about Crazy Cattle 3D",
+    description: "Crazy Cattle 3D is an independently developed battle royale game where players control explosive sheep across varied terrain. Unlike traditional battle royales, we focus on physics-based gameplay with momentum and collision mechanics rather than weapon collection.\n\n" +
+      "Master the art of sheep locomotion across three distinct environments: the rolling hills of Ireland, volcanic Iceland, and mountainous New Zealand. Each map offers unique strategic opportunities, creating a chaotic yet strategic 30-minute battle experience.\n\n" +
+      "While the game's high difficulty level may challenge newcomers, mastering our unique physics system delivers a deeply satisfying experience. Play directly in your browser - no downloads needed, just pure explosive sheep action that keeps you coming back for more.",
     logo: {
       src: "/assets/img/android-chrome-512x512.png",
       alt: "Crazy Cattle 3D"
-    },
-    links: [
-      {
-        text: "How to Play",
-        href: "#how-to-play",
-        icon: "GamepadIcon"
-      },
-      {
-        text: "FAQ",
-        href: "#faq",
-        icon: "HelpCircleIcon"
-      },
-      {
-        text: "About",
-        href: "#footer-about",
-        icon: "InfoIcon"
-      }
-    ]
+    }
+    // 删除 links 配置
   },
   faq: {
     title: "Frequently Asked Questions",
@@ -138,6 +124,8 @@ export const content = {
     }
   }
 } as const;
+
+
 
 
 

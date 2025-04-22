@@ -45,30 +45,6 @@ export function WhatIs() {
               )}>
                 {content.whatIs.description}
               </p>
-              <ul className={cn("flex", theme.whatIs.spacing.links)}>
-                {content.whatIs.links.map((link) => {
-                  const Icon = IconMap[link.icon as keyof typeof IconMap];
-                  return (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          theme.whatIs.colors.link,
-                          theme.whatIs.typography.link,
-                          "flex items-center gap-2"
-                        )}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById(link.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                      >
-                        <Icon className="h-4 w-4" />
-                        {link.text}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
             </div>
           </div>
         </div>
@@ -76,6 +52,7 @@ export function WhatIs() {
     </section>
   );
 }
+
 
 
 

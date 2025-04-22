@@ -100,7 +100,7 @@ export const theme = {
     },
     typography: {
       title: "text-3xl font-bold",
-      description: "text-lg",
+      description: "text-lg leading-relaxed whitespace-pre-line", // 添加 whitespace-pre-line
       link: "font-semibold"
     }
   },
@@ -155,6 +155,7 @@ export const theme = {
     }
   }
 } as const;
+
 
 
 
