@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean-sitemap": "rm -rf public/sitemap*.xml public/robots.txt",
+    "clean-sitemap": "rm -rf out/sitemap*.xml out/robots.txt",
     "dev": "npm run clean-sitemap && next build && next-sitemap && next dev",
     "build": "npm run clean-sitemap && next build && next-sitemap",
     "start": "next start",
@@ -72,4 +72,6 @@
     "zod": "^3.23.8"
   }
 }
+
+
 

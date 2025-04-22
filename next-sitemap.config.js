@@ -7,11 +7,12 @@ module.exports = {
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 7000,
+  outDir: './out',
   transform: async (config, path) => {
     let priority = 0.7;
     let changefreq = 'monthly';
 
-    if (path === '/' || path === '') {  // 修改这里，同时检查 '/' 和 ''
+    if (path === '/' || path === '') {
       priority = 1.0;
       changefreq = 'daily';
     } else if (path === '/privacy-policy' || path === '/terms-of-service') {
@@ -28,4 +29,5 @@ module.exports = {
     }
   },
 }
+
 
