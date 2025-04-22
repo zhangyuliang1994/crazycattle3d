@@ -122,8 +122,35 @@ export const content = {
       playButton: "Play Now",
       imageAlt: (title: string) => `${title} game preview`
     }
+  },
+  features: {
+    title: "Key Features of Crazy Cattle 3D Online Game",
+    items: [
+      {
+        title: "Revolutionary Physics System",
+        description: "Experience our groundbreaking physics engine specifically designed for authentic sheep movement. Each animal responds realistically to environmental factors, creating unpredictable yet strategic gameplay moments. Master momentum-based combat where perfectly timed collisions can send opponents flying off the map."
+      },
+      {
+        title: "Global Battle Arenas",
+        description: "Compete across three meticulously crafted environments: Ireland's rolling hills for aerial attacks, Iceland's hazardous volcanic terrain for tactical play, and New Zealand's mountainous landscape for vertical combat. Each location features unique power-up spots and strategic choke points."
+      },
+      {
+        title: "Pure Skill-Based Competition",
+        description: "Rise through the ranks based purely on skill mastery, not unlocks or upgrades. Our carefully tuned difficulty curve ensures new players can learn while veterans develop advanced techniques. Join our thriving competitive community where top players showcase incredible movement and tactical expertise."
+      },
+      {
+        title: "30-Minute Battle Royale",
+        description: "Engage in intense 30-minute matches where survival, strategy, and timing determine victory. Our unique shrinking arena mechanics force dynamic confrontations, while physics-based combat ensures no two matches play the same. Experience the perfect balance of chaos and skill in every game."
+      }
+    ]
   }
 } as const;
+
+
+
+
+
+
 
 
 

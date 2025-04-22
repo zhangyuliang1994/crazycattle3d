@@ -153,8 +153,18 @@ export const theme = {
       title: "text-3xl font-bold text-center",
       cardTitle: "text-xl"
     }
+  },
+  features: {
+    colors: {
+      item1: "text-blue-600",
+      item2: "text-green-600",
+      item3: "text-purple-600",
+      item4: "text-orange-600"
+    }
   }
 } as const;
+
+
 
 
 

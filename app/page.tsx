@@ -10,6 +10,7 @@ import { FAQ } from "@/components/faq/FAQ";
 import { GameSection } from "@/components/game-section/GameSection";
 import { OtherGames } from "@/components/other-games/OtherGames";
 import { Game, getOtherGames } from "./games/game-data";
+import { Features } from "@/components/features/Features";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,13 +38,13 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8">
         <GameSection />
 
-        <OtherGames 
-          games={getOtherGames()} 
-          onGameSelect={setActiveGame} 
+        <OtherGames
+          games={getOtherGames()}
+          onGameSelect={setActiveGame}
         />
 
+        <Features />
         <WhatIs />
-
         <HowToPlay />
 
         <FAQ />
@@ -57,5 +58,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
