@@ -49,8 +49,8 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
               theme.header.layout.logo.image
             )}
           />
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className={cn(
               layout.header.logoSize,
               "font-bold",
@@ -76,9 +76,13 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
                 )}
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector(link.href)?.scrollIntoView({
-                    behavior: 'smooth'
-                  });
+                  if (window.location.pathname === '/') {
+                    document.querySelector(link.href)?.scrollIntoView({
+                      behavior: 'smooth'
+                    });
+                  } else {
+                    window.location.href = '/' + link.href;
+                  }
                 }}
               >
                 {link.text}
@@ -87,8 +91,8 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
           </nav>
 
           {layout.header.searchEnabled && (
-            <form 
-              onSubmit={onSearch} 
+            <form
+              onSubmit={onSearch}
               className={cn("flex", layout.header.maxWidth, "items-center", theme.header.spacing.search)}
             >
               <Input
@@ -98,9 +102,9 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
                 onChange={(e) => onSearchChange(e.target.value)}
                 aria-label={content.header.search.ariaLabel}
               />
-              <Button 
-                type="submit" 
-                size="icon" 
+              <Button
+                type="submit"
+                size="icon"
                 aria-label={content.header.search.buttonAriaLabel}
               >
                 <Search className="h-4 w-4" />
@@ -112,4 +116,5 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
     </header>
   );
 }
+
 
