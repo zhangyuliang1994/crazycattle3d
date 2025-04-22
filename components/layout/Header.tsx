@@ -11,12 +11,12 @@ import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 
 interface HeaderProps {
-  searchQuery: string;
-  onSearchChange: (value: string) => void;
-  onSearch: (e: React.FormEvent) => void;
+  searchQuery?: string;
+  onSearchChange?: (value: string) => void;
+  onSearch?: (e: React.FormEvent) => void;
 }
 
-export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
+export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch = () => {} }: HeaderProps) {
   if (!layout.header.isVisible) return null;
 
   const headerClassName = cn(
@@ -116,5 +116,6 @@ export function Header({ searchQuery, onSearchChange, onSearch }: HeaderProps) {
     </header>
   );
 }
+
 
 
