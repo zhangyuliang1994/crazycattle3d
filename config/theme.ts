@@ -2,13 +2,13 @@ export const theme = {
   header: {
     colors: {
       // 方案1：温暖柔和的玫瑰金渐变
-      background: "bg-gradient-to-b from-rose-100/90 via-rose-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+      // background: "bg-gradient-to-b from-rose-100/90 via-rose-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
 
       // 方案2：高级灰调渐变
       // background: "bg-gradient-to-b from-slate-200/90 via-gray-100/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
 
       // 方案3：温暖米色渐变
-      // background: "bg-gradient-to-b from-amber-50/90 via-orange-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+      background: "bg-gradient-to-b from-amber-50/90 via-orange-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
 
       border: "border-b border-white/10",
       text: "text-slate-800 dark:text-white/90",
@@ -36,11 +36,19 @@ export const theme = {
   },
   footer: {
     colors: {
-      background: "bg-muted",
-      border: "border-t",
-      text: "text-foreground",
-      mutedText: "text-muted-foreground",
-      hover: "hover:text-primary",
+      // 方案1：温暖柔和的玫瑰金渐变
+      // background: "bg-gradient-to-t from-rose-100/90 via-rose-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+
+      // 方案2：高级灰调渐变
+      // background: "bg-gradient-to-t from-slate-200/90 via-gray-100/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+
+      // 方案3：温暖米色渐变
+      background: "bg-gradient-to-t from-amber-50/90 via-orange-50/85 to-white/80 dark:from-slate-900 dark:via-slate-800/90 dark:to-slate-800/80",
+
+      border: "border-t border-white/10",
+      text: "text-slate-800 dark:text-white/90",
+      mutedText: "text-slate-600 dark:text-slate-400",
+      hover: "hover:text-slate-900 dark:hover:text-white",
     },
     layout: {
       padding: "py-8",
@@ -163,6 +171,8 @@ export const theme = {
     }
   }
 } as const;
+
+
 
 
 
