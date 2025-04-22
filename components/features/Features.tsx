@@ -11,7 +11,14 @@ export function Features() {
   ];
   
   return (
-    <section id="features" className="mb-16 bg-white p-8 rounded-xl shadow-md">
+    <section 
+      id="features" 
+      className={cn(
+        "mb-24",
+        theme.layout.section.spacing,
+        theme.layout.section.scrollMargin  // 添加统一的滚动偏移量
+      )}
+    >
       <h2 className="text-3xl font-bold mb-6 text-center">{content.features.title}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {content.features.items.map((feature, index) => (
@@ -26,3 +33,4 @@ export function Features() {
     </section>
   );
 }
+

@@ -11,6 +11,7 @@ export const content = {
     navigation: {
       links: [
         { text: "Play Game", href: "#game-section" },
+        { text: "Features", href: "#features" },
         { text: "What Is", href: "#what-is" },
         { text: "How to Play", href: "#how-to-play" },
         { text: "FAQ", href: "#faq" },
@@ -145,6 +146,7 @@ export const content = {
     ]
   }
 } as const;
+
 
 
 
