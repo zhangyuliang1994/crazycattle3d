@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+"use client";
+import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { GameSection } from "@/components/game-section/GameSection";
 import { OtherGames } from "@/components/other-games/OtherGames";
@@ -10,34 +11,34 @@ import { Rating } from "@/components/rating/Rating";
 import { Footer } from "@/components/layout/Footer";
 import { getOtherGames } from "../games/game-data";
 
-interface HomeTemplateProps {
-  searchQuery: string;
-  onSearchChange: (value: string) => void;
-  onSearch: (e: React.FormEvent) => void;
-  activeGame: string | null;
-  onGameSelect: (game: string) => void;
-}
+export default function HomeTemplate() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeGame, setActiveGame] = useState<string | null>(null);
 
-export default function HomeTemplate({
-  searchQuery,
-  onSearchChange,
-  onSearch,
-  activeGame,
-  onGameSelect
-}: HomeTemplateProps) {
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const game = getOtherGames().find(game =>
+      game.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    if (game) {
+      const element = document.getElementById("other-games");
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header
         searchQuery={searchQuery}
-        onSearchChange={onSearchChange}
-        onSearch={onSearch}
+        onSearchChange={setSearchQuery}
+        onSearch={handleSearch}
       />
 
       <main className="container mx-auto px-4 py-8">
         <GameSection />
         <OtherGames
           games={getOtherGames()}
-          onGameSelect={onGameSelect}
+          onGameSelect={setActiveGame}
         />
         <Features />
         <WhatIs />
@@ -52,4 +53,6 @@ export default function HomeTemplate({
     </div>
   );
 }
+
+
 
