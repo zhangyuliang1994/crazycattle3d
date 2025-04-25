@@ -50,7 +50,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href={siteConfig.url} />
         <link rel="apple-touch-icon" sizes="180x180" href={siteConfig.images.icon.apple} />
         <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.images.icon.favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={siteConfig.images.icon.favicon16} />
@@ -77,3 +76,4 @@ export default function RootLayout({
     </html>
   );
 }
+

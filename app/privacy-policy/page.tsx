@@ -1,6 +1,13 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
+export const metadata = {
+  title: 'Privacy Policy',
+  alternates: {
+    canonical: '/privacy-policy',
+  }
+};
+
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -116,4 +123,5 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
 
