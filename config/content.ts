@@ -1,5 +1,4 @@
 import { siteConfig } from "./site";
-import { GAME_ROUTES } from './constants';
 
 export const content = {
   header: {
@@ -114,8 +113,9 @@ export const content = {
   gameSection: {
     title: "Crazy Cattle 3D",
     game: {
-      url: GAME_ROUTES.EMBED_GAME,
-      title: "crazycattle3d"
+      url: '/game',
+      title: "crazycattle3d",
+      externalUrl: 'https://wordle2.io/crazy-cattle-3d.embed'
     }
   },
   otherGames: {
@@ -147,6 +147,7 @@ export const content = {
     ]
   }
 } as const;
+
 
 
 

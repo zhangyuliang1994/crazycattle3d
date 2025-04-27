@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
-import { GAME_ROUTES } from '@/config/constants';
+import { content } from '@/config/content';
 
 export async function GET() {
   try {
-    const response = await fetch(GAME_ROUTES.EXTERNAL_GAME_URL, {
+    const response = await fetch(content.gameSection.game.externalUrl, {
       next: { revalidate: 3600 } // 1小时缓存
     });
     
