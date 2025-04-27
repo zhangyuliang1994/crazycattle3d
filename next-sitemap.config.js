@@ -7,7 +7,7 @@ module.exports = {
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 7000,
-  outDir: './out',
+  outDir: './public',  // 改为 public 目录
   transform: async (config, path) => {
     let priority = 0.7;
     let changefreq = 'monthly';
@@ -29,5 +29,6 @@ module.exports = {
     }
   },
 }
+
 
 
