@@ -1,4 +1,5 @@
 import { siteConfig } from "./site";
+import { GAME_ROUTES } from './constants';
 
 export const content = {
   header: {
@@ -113,7 +114,7 @@ export const content = {
   gameSection: {
     title: "Crazy Cattle 3D",
     game: {
-      url: "https://crazycattle3d.io/crazy-cattle-3d.embed",
+      url: GAME_ROUTES.EMBED_GAME,
       title: "crazycattle3d"
     }
   },
@@ -146,6 +147,8 @@ export const content = {
     ]
   }
 } as const;
+
+
 
 
 
