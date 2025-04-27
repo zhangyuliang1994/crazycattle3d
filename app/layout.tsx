@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Crazy Cattle 3D - Free Online Game',
     description: 'Play free online game without download at Crazy Cattle 3D',
+    images: [siteConfig.images.og],  // 添加 Twitter 卡片图片
   },
   robots: {
     index: true,
@@ -54,7 +55,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.images.icon.favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={siteConfig.images.icon.favicon16} />
         <link rel="manifest" href={siteConfig.metadata.manifestPath} />
-        <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" />
+        {/* <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" /> */}
         <link rel="shortcut icon" href={siteConfig.images.icon.favicon} />
         <meta name="theme-color" content={siteConfig.metadata.themeColor} />
         {/* Google Analytics */}

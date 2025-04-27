@@ -20,9 +20,9 @@ export const siteConfig = {
       favicon16: "/assets/img/favicon-16x16.png",
       favicon32: "/assets/img/favicon-32x32.png",
       apple: "/assets/img/apple-touch-icon.png",
-      safari: "/assets/img/safari-pinned-tab.svg",
+      // safari: "/assets/img/safari-pinned-tab.svg",
     },
-    og: "/assets/img/og-image.jpg",
+    og: "/assets/img/crazy-cattle-3d-og-image.png",
   },
 } as const;
 
