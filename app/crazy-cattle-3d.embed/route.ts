@@ -4,7 +4,7 @@ import { content } from '@/config/content';
 export async function GET() {
   try {
     const response = await fetch(content.gameSection.game.externalUrl, {
-      next: { revalidate: 3600 } // 1小时缓存
+      next: { revalidate: 3600 }
     });
     
     if (!response.ok) {

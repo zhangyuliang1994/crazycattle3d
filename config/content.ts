@@ -113,7 +113,7 @@ export const content = {
   gameSection: {
     title: "Crazy Cattle 3D",
     game: {
-      url: '/game',
+      url: '/crazy-cattle-3d.embed',
       title: "crazycattle3d",
       externalUrl: 'https://wordle2.io/crazy-cattle-3d.embed'
     }
@@ -147,6 +147,7 @@ export const content = {
     ]
   }
 } as const;
+
 
 
 

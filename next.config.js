@@ -7,7 +7,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/game',
+        source: '/crazy-cattle-3d.embed',
         destination: 'https://wordle2.io/crazy-cattle-3d.embed',
       },
     ]
@@ -15,5 +15,7 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+
 
 
