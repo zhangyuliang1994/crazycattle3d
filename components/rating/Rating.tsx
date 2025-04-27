@@ -36,7 +36,21 @@ export function Rating() {
   const [votes, setVotes] = useState<number>(initialCalculatedVotes);
 
   useEffect(() => {
+    // 读取所有保存的状态
+    const savedHasVoted = localStorage.getItem('hasVoted') === 'true';
+    const savedUserRating = localStorage.getItem('userRating');
+    const savedGlobalRating = localStorage.getItem('globalRating');
     const savedTotalVotes = localStorage.getItem('totalVotes');
+
+    if (savedHasVoted) {
+      setHasVoted(true);
+      if (savedUserRating) {
+        setUserRating(parseInt(savedUserRating));
+      }
+      if (savedGlobalRating) {
+        setRating(parseFloat(savedGlobalRating));
+      }
+    }
     if (savedTotalVotes) {
       setVotes(parseInt(savedTotalVotes));
     }
@@ -137,6 +151,7 @@ export function Rating() {
     </section>
   );
 }
+
 
 
 
