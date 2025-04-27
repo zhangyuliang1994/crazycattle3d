@@ -9,7 +9,7 @@ const TermsOfService = () => {
 
       <main className="container mx-auto">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <h1 className="text-3xl text-center font-bold mb-6">Terms of Service</h1>
+          <h2 className="text-3xl text-center font-bold mb-6">Terms of Service</h2>
 
           <div className="space-y-6">
             <section>
@@ -107,6 +107,7 @@ const TermsOfService = () => {
 };
 
 export default TermsOfService;
+
 
 
 

@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
 
       <main className="container mx-auto">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <h1 className="text-3xl text-center font-bold mb-6">Privacy Policy</h1>
+          <h2 className="text-3xl text-center font-bold mb-6">Privacy Policy</h2>
 
           <div className="space-y-6">
             <section>
