@@ -1,11 +1,12 @@
-import HomeTemplate from "./home/page";
-import { metadata } from './home/layout';
+import { HomeTemplate } from "@/components/home/HomeTemplate";
 
-export { metadata };  // 导出 metadata 给路由系统使用
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+  // 其他首页专属metadata配置
+};
 
 export default function Page() {
   return <HomeTemplate />;
 }
-
-
-

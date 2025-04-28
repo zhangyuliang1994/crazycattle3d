@@ -9,9 +9,9 @@ import { HowToPlay } from "@/components/how-to-play/HowToPlay";
 import { FAQ } from "@/components/faq/FAQ";
 import { Rating } from "@/components/rating/Rating";
 import { Footer } from "@/components/layout/Footer";
-import { getOtherGames } from "../games/game-data";
+import { getOtherGames } from "@/app/games/game-data";
 
-export default function HomeTemplate() {
+export function HomeTemplate() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeGame, setActiveGame] = useState<string | null>(null);
 
@@ -53,6 +53,3 @@ export default function HomeTemplate() {
     </div>
   );
 }
-
-
-
