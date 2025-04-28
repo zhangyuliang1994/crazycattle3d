@@ -5,7 +5,7 @@
   "scripts": {
     "clean-sitemap": "rm -rf public/sitemap*.xml public/robots.txt",
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "build": "next build && next-sitemap && rm -rf out/home",
     "start": "next start",
     "lint": "next lint",
     "sitemap": "npm run clean-sitemap && next-sitemap"
@@ -72,6 +72,7 @@
     "zod": "^3.23.8"
   }
 }
+
 
 
 
