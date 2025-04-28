@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: '/crazy-cattle-3d.embed',
-        destination: 'https://wordle2.io/crazy-cattle-3d.embed',
+        destination: '/game/crazycattle3d/index.html',
       },
     ]
   }

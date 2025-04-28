@@ -115,7 +115,7 @@ export const content = {
     game: {
       url: '/crazy-cattle-3d.embed',
       title: "crazycattle3d",
-      externalUrl: 'https://wordle2.io/crazy-cattle-3d.embed'
+      externalUrl: '/game/crazycattle3d/index.html'
     }
   },
   otherGames: {
