@@ -1,15 +1,19 @@
-import { content } from "@/config/content";
+import { content as defaultContent } from "@/config/content";
 import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils";
 import { HowToPlayCard } from "./HowToPlayCard";
 import { howToPlaySchema } from "@/app/schema";
 
-export function HowToPlay() {
+interface HowToPlayProps {
+  content?: typeof defaultContent;
+}
+
+export function HowToPlay({ content = defaultContent }: HowToPlayProps) {
   const paragraphs = content.howToPlay.description.split('\n\n');
 
   return (
-    <section 
-      id="how-to-play" 
+    <section
+      id="how-to-play"
       className={cn(
         "mb-24",
         theme.howToPlay.spacing.section,
@@ -46,6 +50,7 @@ export function HowToPlay() {
     </section>
   );
 }
+
 
 
 

@@ -36,7 +36,7 @@ export function GamePageTemplate({ gameConfig }: GamePageTemplateProps) {
         />
         <Features content={gameConfig.content} />
         <WhatIs content={gameConfig.content} />
-        <HowToPlay />
+        <HowToPlay content={gameConfig.content} />
         <FAQ />
       </main>
 
@@ -80,5 +80,6 @@ export function GamePageTemplate({ gameConfig }: GamePageTemplateProps) {
     </div>
   );
 }
+
 
 
