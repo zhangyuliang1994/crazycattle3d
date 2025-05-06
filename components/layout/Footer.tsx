@@ -51,16 +51,18 @@ export function Footer() {
               <ul className={theme.footer.spacing.linkList}>
                 {content.footer.games.links.map((link) => (
                   <li key={link.href}>
-                    <Link
+                    <a
                       href={link.href}
                       className={cn(
                         "text-sm",
                         theme.footer.colors.mutedText,
                         theme.footer.colors.hover
                       )}
+                      target="_blank"
+                      rel="noopener"  // 只使用 noopener 以传递权重
                     >
                       {link.text}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -76,16 +78,18 @@ export function Footer() {
               <ul className={theme.footer.spacing.linkList}>
                 {content.footer.quickLinks.links.map((link) => (
                   <li key={link.href}>
-                    <Link
+                    <a
                       href={link.href}
                       className={cn(
                         "text-sm",
                         theme.footer.colors.mutedText,
                         theme.footer.colors.hover
                       )}
+                      target="_blank"
+                      rel="noopener"  // 只使用 noopener 以传递权重
                     >
                       {link.text}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -104,10 +108,10 @@ export function Footer() {
                   return (
                     <div key={link.href} className="flex items-center space-x-2">
                       <Icon className="h-5 w-5" />
-                      <Link
+                      <a
                         href={link.href}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer"  // 使用 noreferrer 不传递权重
                         className={cn(
                           "text-sm",
                           theme.footer.colors.mutedText,
@@ -115,7 +119,7 @@ export function Footer() {
                         )}
                       >
                         {link.icon}
-                      </Link>
+                      </a>
                     </div>
                   );
                 })}
@@ -133,22 +137,24 @@ export function Footer() {
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </div>
 
-            {/* Legal Links */}
+            {/* Legal Links - 使用普通 a 标签 */}
             {layout.footer.sections.legal && (
               <div className="mb-4 md:mb-0">
                 <ul className="flex space-x-4">
                   {content.footer.legal.links.map((link) => (
                     <li key={link.href}>
-                      <Link
+                      <a
                         href={link.href}
                         className={cn(
                           "text-sm",
                           theme.footer.colors.mutedText,
                           theme.footer.colors.hover
                         )}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {link.text}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -161,6 +167,4 @@ export function Footer() {
     </footer>
   );
 }
-
-
 
