@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { theme } from "@/config/theme";
 import { content } from "@/config/content";
 import { layout } from "@/config/layout";
@@ -18,6 +19,24 @@ interface HeaderProps {
 
 export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch = () => {} }: HeaderProps) {
   if (!layout.header.isVisible) return null;
+
+  // 添加路径解析
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
+  // 格式化路径为标题
+  const formatPathToTitle = () => {
+    if (isHomePage) return content.header.title;
+
+    // 移除开头的斜杠，并将所有斜杠替换为破折号
+    const pathSegment = pathname.slice(1).replace(/\//g, '-');
+
+    // 将破折号分隔的单词首字母大写
+    return pathSegment
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
 
   const headerClassName = cn(
     layout.header.isVisible ? "" : "hidden",
@@ -41,25 +60,24 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
       <div className={containerClassName}>
         {/* 左侧 Logo 和标题 */}
         <div className={theme.header.layout.logo.wrapper}>
-          <img
-            src={layout.header.logo.src}
-            alt={content.header.title}
-            className={cn(
-              layout.header.logo.size,
-              theme.header.layout.logo.image
-            )}
-          />
-          <Link
-            href="/"
-            className={cn(
-              layout.header.logoSize,
-              "font-bold",
-              theme.header.colors.text,
-              "hover:opacity-90 transition-opacity"
-            )}
-          >
-            <h1>{content.header.title}</h1>
+          <Link href="/">
+            <img
+              src={layout.header.logo.src}
+              alt={content.header.title}
+              className={cn(
+                layout.header.logo.size,
+                theme.header.layout.logo.image,
+                "cursor-pointer hover:opacity-90 transition-opacity"
+              )}
+            />
           </Link>
+          <h1 className={cn(
+            layout.header.logoSize,
+            "font-bold",
+            theme.header.colors.text
+          )}>
+            {formatPathToTitle()}
+          </h1>
         </div>
 
         {/* 右侧导航和搜索 */}
@@ -116,6 +134,7 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
     </header>
   );
 }
+
 
 
 
