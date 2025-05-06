@@ -2,12 +2,16 @@
 
 import { useState, useRef } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
-import { content } from "@/config/content";
+import { content as defaultContent } from "@/config/content";
 import { theme } from "@/config/theme";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
 
-export function GameSection() {
+interface GameSectionProps {
+  content?: typeof defaultContent;
+}
+
+export function GameSection({ content = defaultContent }: GameSectionProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -70,6 +74,7 @@ export function GameSection() {
     </section>
   );
 }
+
 
 
 

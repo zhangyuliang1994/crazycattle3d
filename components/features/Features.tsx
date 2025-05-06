@@ -1,8 +1,12 @@
-import { content } from "@/config/content";
+import { content as defaultContent } from "@/config/content";
 import { theme } from "@/config/theme";
 import { cn } from "@/lib/utils";
 
-export function Features() {
+interface FeaturesProps {
+  content?: typeof defaultContent;
+}
+
+export function Features({ content = defaultContent }: FeaturesProps) {
   const colors = [
     theme.features.colors.item1, 
     theme.features.colors.item2, 
@@ -33,4 +37,5 @@ export function Features() {
     </section>
   );
 }
+
 

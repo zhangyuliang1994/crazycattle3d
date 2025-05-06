@@ -10,11 +10,16 @@ const nextConfig = {
         source: '/crazy-cattle-3d.embed',
         destination: '/game/crazycattle3d/index.html',
       },
+      {
+        source: '/crazy-cow-3d.embed',
+        destination: '/game/crazycow3d/index.html',
+      }
     ]
   }
 };
 
 module.exports = nextConfig;
+
 
 
 
