@@ -30,6 +30,13 @@ export const content = {
         { text: "AI Image Generator", href: "https://aiimage.pics" },
       ]
     },
+    games: {  // 添加 games section
+      title: "Games",
+      links: [
+        { text: "Crazy Cattle 3D", href: "/" },
+        { text: "Crazy Cow 3D", href: "/crazy-cow-3d" },
+      ]
+    },
     social: {
       title: "Share",
       links: [
@@ -146,6 +153,7 @@ export const content = {
     ]
   }
 } as const;
+
 
 
 

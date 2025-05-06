@@ -42,6 +42,31 @@ export function Footer() {
             </div>
           )}
 
+          {/* Games Section */}
+          {layout.footer.sections.games && (
+            <div>
+              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
+                {content.footer.games.title}
+              </h3>
+              <ul className={theme.footer.spacing.linkList}>
+                {content.footer.games.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "text-sm",
+                        theme.footer.colors.mutedText,
+                        theme.footer.colors.hover
+                      )}
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Quick Links Section */}
           {layout.footer.sections.quickLinks && (
             <div>
@@ -122,6 +147,8 @@ export function Footer() {
               </ul>
             </div>
           )}
+
+
         </div>
 
         {/* Copyright Section */}
@@ -137,4 +164,5 @@ export function Footer() {
     </footer>
   );
 }
+
 

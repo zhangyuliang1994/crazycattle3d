@@ -24,6 +24,7 @@ export const layout = {
       quickLinks: true,
       social: true,
       legal: true,
+      games: true,  // 添加 games section
     }
   },
   whatIs: {
@@ -50,6 +51,7 @@ export const layout = {
     }
   }
 } as const;
+
 
 
 
