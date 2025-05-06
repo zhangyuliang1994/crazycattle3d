@@ -45,8 +45,8 @@ export const crazyCowContent = {
       "游戏采用简单易上手的控制方式，但要真正掌握需要策略和技巧。通过积累动能和精准的碰撞时机，将对手撞出竞技场获得胜利。\n\n" +
       "无需下载，直接在浏览器中即可畅玩这款充满乐趣的物理碰撞游戏。每一局比赛都充满变数，带来无尽的游戏乐趣。",
     logo: {
-      src: "/assets/img/crazy-cow-logo.png",
-      alt: "Crazy Cow 3D Logo"
+      src: "/assets/crazy-cow-3d/crazy-cow-3d.png",
+      alt: "Crazy Cow 3D"
     }
   },
   
