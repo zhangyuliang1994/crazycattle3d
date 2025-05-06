@@ -1,4 +1,4 @@
-import { content } from "@/config/content";
+import { content as defaultContent } from "@/config/content";
 import { theme } from "@/config/theme";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
@@ -11,10 +11,14 @@ const IconMap = {
   InfoIcon
 };
 
-export function WhatIs() {
+interface WhatIsProps {
+  content?: typeof defaultContent;
+}
+
+export function WhatIs({ content = defaultContent }: WhatIsProps) {
   return (
-    <section 
-      id="what-is" 
+    <section
+      id="what-is"
       className={cn(
         theme.whatIs.layout.section,
         theme.layout.section.scrollMargin
@@ -52,6 +56,7 @@ export function WhatIs() {
     </section>
   );
 }
+
 
 
 
