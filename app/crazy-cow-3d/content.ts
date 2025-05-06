@@ -3,7 +3,7 @@ import { content as globalContent } from "@/config/content";
 export const crazyCowContent = {
   // 基础内容继承自全局配置
   ...globalContent,
-  
+
   // 游戏区域配置
   gameSection: {
     ...globalContent.gameSection,
@@ -14,80 +14,80 @@ export const crazyCowContent = {
       externalUrl: '/game/crazycow3d/index.html'
     }
   },
-  
+
   // 特性部分配置
   features: {
-    title: "Crazy Cow 3D 游戏特性",
+    title: "Features of Crazy Cattle 3D Online Game",
     items: [
       {
-        title: "物理引擎",
-        description: "Crazy Cow 3D 采用先进的物理引擎，让每一次碰撞都真实可感。牛的移动、跳跃和撞击都遵循真实物理规则，带来前所未有的游戏体验。"
+        title: "Advanced Physics Engine",
+        description: "Crazy Cow 3D introduces a groundbreaking physics engine specifically designed for authentic cattle movement. Every animal responds realistically to environmental factors, creating dynamic and unpredictable gameplay moments. The physics system in Crazy Cow 3D ensures precise collision detection, allowing players to execute tactical maneuvers like momentum-based attacks and strategic dodges. Whether you're performing a calculated aerial assault or narrowly escaping elimination, our physics engine delivers consistently engaging combat scenarios."
       },
       {
-        title: "多样环境",
-        description: "在多种精心设计的3D环境中战斗，从草原到山地，每个场景都有独特的战略价值和挑战。"
+        title: "Global Battle Environments",
+        description: "Explore Crazy Cow 3D's three meticulously crafted battle arenas: Ireland's rolling hills perfect for building momentum and executing aerial strikes, Iceland's treacherous volcanic terrain offering tactical hazard zones, and New Zealand's mountainous landscape enabling vertical combat strategies. Each environment in Crazy Cow 3D features carefully balanced power-up locations and strategic choke points. The diverse landscapes of Crazy Cow 3D fundamentally change how you approach combat and survival, ensuring every match brings fresh tactical challenges."
       },
       {
-        title: "技能系统",
-        description: "解锁和升级各种特殊技能，让你的疯狂奶牛更具战斗力。从冲撞加速到空中翻转，掌握这些技能是成为顶尖玩家的关键。"
+        title: "Pure Skill-Based Combat",
+        description: "Crazy Cow 3D sets itself apart with a pure skill-based progression system - no paid advantages, just pure tactical gameplay. Master the physics-based combat where perfectly timed collisions send opponents flying off the map. Our carefully tuned difficulty curve ensures new players can learn the basics while veterans discover advanced techniques. The competitive spirit of Crazy Cow 3D shines through as top players showcase incredible movement mastery and strategic thinking."
       },
       {
-        title: "多人对战",
-        description: "与来自世界各地的玩家一起竞技，在实时排行榜上争夺最高分。支持多达8名玩家的同场对战，带来紧张刺激的多人游戏体验。"
+        title: "Battle Royale Innovation",
+        description: "Experience Crazy Cow 3D's unique take on the battle royale format, where physics-based combat meets strategic gameplay. Each 30-minute match features a dynamically shrinking arena that forces tactical confrontations. The streamlined gameplay loop makes Crazy Cow 3D easy to understand but challenging to master, delivering consistent excitement from start to finish. Rise through the ranks based purely on your skill and strategic prowess."
       }
     ]
   },
-  
-  // 什么是部分配置
+
+  // What Is section configuration
   whatIs: {
-    title: "什么是 Crazy Cow 3D?",
-    description: "Crazy Cow 3D 是一款基于物理引擎的3D动作游戏，玩家控制一头疯狂的奶牛，在各种环境中与其他奶牛展开激烈的碰撞对决。\n\n" +
-      "游戏采用简单易上手的控制方式，但要真正掌握需要策略和技巧。通过积累动能和精准的碰撞时机，将对手撞出竞技场获得胜利。\n\n" +
-      "无需下载，直接在浏览器中即可畅玩这款充满乐趣的物理碰撞游戏。每一局比赛都充满变数，带来无尽的游戏乐趣。",
+    title: "Everything about Crazy Cow 3D",
+    description: "Crazy Cow 3D is an independently developed battle royale game where players control explosive cows across varied terrain. Unlike traditional battle royales, we focus on physics-based gameplay with momentum and collision mechanics rather than weapon collection.\n\n" +
+      "Master the art of cow locomotion across three distinct environments: the rolling hills of Ireland, volcanic Iceland, and mountainous New Zealand. Each map offers unique strategic opportunities, creating a chaotic yet strategic 30-minute battle experience.\n\n" +
+      "While the game's high difficulty level may challenge newcomers, mastering our unique physics system delivers a deeply satisfying experience. Play directly in your browser - no downloads needed, just pure explosive cow action that keeps you coming back for more.",
     logo: {
-      src: "/assets/crazy-cow-3d/crazy-cow-3d.png",
-      alt: "Crazy Cow 3D"
+      src: "/assets/img/android-chrome-512x512.png",
+      alt: "Crazy Cow 3D Logo"
     }
   },
-  
-  // 如何玩部分配置
+
+  // How To Play section configuration
   howToPlay: {
-    title: "如何玩 Crazy Cow 3D",
-    description: "使用WASD或方向键控制你的疯狂奶牛移动。按住空格键可以蓄力，释放后进行冲刺。鼠标控制视角，点击左键可以执行特殊动作。\n\n" +
-      "游戏的核心是积累动能并利用地形优势。从高处冲下可以获得更大的冲击力，精准的碰撞角度可以将对手击飞更远。注意保持平衡，避免自己掉出场地。\n\n" +
-      "收集场地中出现的道具可以获得临时能力加成，如速度提升、重量增加或特殊技能。合理利用这些道具是取胜的关键。",
-    image: "/assets/crazy-cow-howto.jpg",
-    imageAlt: "Crazy Cow 3D 游戏控制指南"
+    title: "How to Play Crazy Cow 3D - Game Controls & Guide",
+    description: "Playing Crazy Cow 3D online is easy: Use WASD keys for movement and mouse for precise cow steering in this free browser game. The space bar triggers your special collision ability in Crazy Cow 3D - master the timing for devastating impacts. Perfect your control over the cow's momentum as you navigate through the 3D battle arena.\n\n" +
+      "Success in Crazy Cow 3D multiplayer battles depends on mastering the physics-based momentum system. Strategically build speed by moving downhill in the 3D arena, then unleash powerful attacks or execute quick escapes. Crazy Cow 3D's unique collision mechanics reward skillful timing - precisely angled hits send opponents flying off the map, while mistimed attacks leave your cow exposed.\n\n" +
+      "Win more Crazy Cow 3D matches by starting defensively - focus on survival and strategic positioning in the 3D battlefield. Study each arena's layout to discover prime attack positions and danger zones. After defeats in Crazy Cow 3D, spectate top players to learn pro techniques - analyze their movement patterns and collision strategies. Keep practicing this free online physics game, and you'll soon master the art of cow combat!",
+    image: "/assets/crazy-cow-3d/crazy-cow-3d.png",
+    imageAlt: "Crazy Cow 3D Game Guide - Controls, Physics, and Strategy Tutorial"
   },
-  
-  // FAQ部分配置
+
+  // FAQ section configuration
   faq: {
-    title: "常见问题",
+    title: "Frequently Asked Questions",
     items: [
       {
-        value: "controls",
-        question: "游戏控制方式是什么？",
-        answer: "使用WASD或方向键控制移动，空格键蓄力冲刺，鼠标控制视角和特殊动作。游戏内有详细的教程指导。"
+        value: "new-player",
+        question: "How difficult is Crazy Cow 3D for new players?",
+        answer: "Crazy Cow 3D is designed with an intuitive physics-based control system that's easy to grasp but challenging to master. The game starts with basic movement mechanics, allowing new players to enjoy immediate action while gradually discovering advanced techniques. Our tutorial mode helps you understand momentum-based gameplay, and the forgiving respawn system encourages experimentation without frustration."
       },
       {
-        value: "multiplayer",
-        question: "如何与朋友一起玩？",
-        answer: "点击游戏主菜单中的'多人模式'，然后创建房间或加入好友的房间。你也可以选择随机匹配，与全球玩家一起游戏。"
+        value: "technical-requirements",
+        question: "What are the technical requirements for smooth Crazy Cow 3D gameplay?",
+        answer: "For the best Crazy Cow 3D experience, we recommend using a modern browser (Chrome, Firefox, or Edge) and a stable internet connection. The game's physics engine is optimized to run smoothly on most devices, but for best performance, ensure your device has at least 4GB RAM and updated graphics drivers. If you experience any slowdown, try adjusting the quality settings in the game menu."
       },
       {
-        value: "performance",
-        question: "游戏在我的设备上运行缓慢，怎么办？",
-        answer: "尝试在游戏设置中降低图形质量，关闭不必要的视觉效果。确保浏览器是最新版本，并关闭其他占用资源的标签页或应用。"
+        value: "game-modes",
+        question: "What game modes are available in Crazy Cow 3D?",
+        answer: "Crazy Cow 3D currently features an exciting single-player arena mode where you compete against intelligent AI opponents. Each match offers a unique experience thanks to our dynamic physics system and varied arena layouts. Practice mode lets you perfect your skills without pressure, while Challenge mode puts your abilities to the test with increasingly difficult scenarios and objectives."
       },
       {
-        value: "progress",
-        question: "游戏进度会保存吗？",
-        answer: "是的，游戏进度会自动保存在你的浏览器中。如果你创建账号并登录，你的进度将保存在云端，可以在不同设备间同步。"
+        value: "comfort-settings",
+        question: "How can I adjust Crazy Cow 3D for a more comfortable gaming experience?",
+        answer: "Crazy Cow 3D includes several comfort options to enhance your gaming experience. You can adjust camera sensitivity, enable smooth camera transitions, and customize control responsiveness. We recommend starting with default settings and gradually adjusting them to match your play style. The game also features visual indicators for better spatial awareness during intense physics-based battles."
       },
       {
-        value: "updates",
-        question: "游戏多久更新一次？",
-        answer: "我们通常每月发布一次更新，包括新地图、角色或功能。关注我们的社交媒体或游戏内公告以获取最新更新信息。"
+        value: "winning-tactics",
+        question: "What tactics help secure victories in Crazy Cow 3D?",
+        answer: "Mastering Crazy Cow 3D requires understanding of momentum and timing. Start by learning the arena layouts and identifying high-ground advantages. Use the environment to build speed, and practice the signature 'bounce boost' technique for quick escapes. Advanced players can master the 'precision impact' strategy, where carefully timed collisions can send opponents off balance. Remember, strategic positioning often matters more than aggressive charging."
       }
     ]
   }
