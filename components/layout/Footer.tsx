@@ -122,47 +122,45 @@ export function Footer() {
               </div>
             </div>
           )}
-
-          {/* Legal Links Section */}
-          {layout.footer.sections.legal && (
-            <div>
-              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.legal.title}
-              </h3>
-              <ul className={theme.footer.spacing.linkList}>
-                {content.footer.legal.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "text-sm",
-                        theme.footer.colors.mutedText,
-                        theme.footer.colors.hover
-                      )}
-                    >
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-
         </div>
 
-        {/* Copyright Section */}
+        {/* Copyright and Legal Section - 重新设计的部分 */}
         <div className="mt-8 pt-8 border-t">
-          <div className={cn("text-center text-sm", theme.footer.colors.mutedText)}>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          {/* Legal Links 和 Copyright 放在一起 */}
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            {/* Copyright */}
+            <div className={cn("text-sm", theme.footer.colors.mutedText)}>
+              © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            </div>
+
+            {/* Legal Links */}
+            {layout.footer.sections.legal && (
+              <div className="mb-4 md:mb-0">
+                <ul className="flex space-x-4">
+                  {content.footer.legal.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className={cn(
+                          "text-sm",
+                          theme.footer.colors.mutedText,
+                          theme.footer.colors.hover
+                        )}
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          <div className={cn("text-center text-xs mt-2", theme.footer.colors.mutedText)}>
-            All games on this platform are free to play and do not require downloads.
-          </div>
+
         </div>
       </div>
     </footer>
   );
 }
+
 
 
