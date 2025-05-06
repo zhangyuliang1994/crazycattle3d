@@ -122,7 +122,6 @@ export const content = {
     title: "Play Other Games",
     cardLabels: {
       playButton: "Play Now",
-      imageAlt: (title: string) => `${title} game preview`
     }
   },
   features: {

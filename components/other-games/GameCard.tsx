@@ -24,7 +24,7 @@ export function GameCard({ id, title, description, image, url, onPlay }: GameCar
       <CardHeader className="p-0">
         <img
           src={image}
-          alt={content.otherGames.cardLabels.imageAlt(title)}
+          alt={`${title} preview`}
           className={theme.otherGames.layout.image}
           loading="lazy"
         />
