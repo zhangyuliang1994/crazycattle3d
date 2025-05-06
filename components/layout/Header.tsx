@@ -94,11 +94,14 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
                 )}
                 onClick={(e) => {
                   e.preventDefault();
-                  if (window.location.pathname === '/') {
-                    document.querySelector(link.href)?.scrollIntoView({
+                  // 修复：在当前页面查找锚点，如果找不到才跳转到首页
+                  const targetElement = document.querySelector(link.href);
+                  if (targetElement) {
+                    targetElement.scrollIntoView({
                       behavior: 'smooth'
                     });
                   } else {
+                    // 如果当前页面没有找到目标元素，则跳转到首页对应的锚点
                     window.location.href = '/' + link.href;
                   }
                 }}
@@ -134,6 +137,7 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
     </header>
   );
 }
+
 
 
 
