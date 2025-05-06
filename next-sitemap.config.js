@@ -5,11 +5,11 @@ module.exports = {
   siteUrl: 'https://crazy-cattle.net',
   generateRobotsTxt: true,
   changefreq: 'daily',
-  priority: 0.7,
+  priority: 0.9,
   outDir: './public',
   generateIndexSitemap: false,  // 禁用索引 sitemap
   transform: async (config, path) => {
-    let priority = 0.7;
+    let priority = 0.9;
     let changefreq = 'monthly';
 
     if (path === '/' || path === '') {
