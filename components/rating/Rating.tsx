@@ -40,21 +40,27 @@ export function Rating() {
     const savedHasVoted = localStorage.getItem('hasVoted') === 'true';
     const savedUserRating = localStorage.getItem('userRating');
     const savedGlobalRating = localStorage.getItem('globalRating');
-    const savedTotalVotes = localStorage.getItem('totalVotes');
 
+    // 只有在用户已投票的情况下才设置用户评分
     if (savedHasVoted) {
       setHasVoted(true);
       if (savedUserRating) {
         setUserRating(parseInt(savedUserRating));
       }
+
+      // 如果有保存的全局评分，使用它；否则使用初始评分
       if (savedGlobalRating) {
         setRating(parseFloat(savedGlobalRating));
       }
+
+      // 不再从localStorage读取总票数，而是使用计算的值
+      // 这样票数会随时间增长
     }
-    if (savedTotalVotes) {
-      setVotes(parseInt(savedTotalVotes));
-    }
-  }, []);
+
+    // 无论用户是否投票，总是使用计算出的初始票数
+    // 如果用户已投票，则在计算的基础上加1
+    setVotes(savedHasVoted ? initialCalculatedVotes + 1 : initialCalculatedVotes);
+  }, [initialCalculatedVotes]);
 
   const handleVote = (star: number) => {
     if (!hasVoted) {
@@ -151,6 +157,7 @@ export function Rating() {
     </section>
   );
 }
+
 
 
 
