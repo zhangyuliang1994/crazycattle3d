@@ -13,12 +13,17 @@ const nextConfig = {
       {
         source: '/crazy-cow-3d.embed',
         destination: '/game/crazycow3d/index.html',
+      },
+      {
+        source: '/cheese-chompers-3d.embed',
+        destination: '/game/cheesechompers3d/index.html',
       }
     ]
   }
 };
 
 module.exports = nextConfig;
+
 
 
 
