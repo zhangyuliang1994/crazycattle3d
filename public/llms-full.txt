@@ -32,6 +32,16 @@ An alternative version with a focus on hilarious physics-based mayhem rather tha
 
 URL: https://crazy-cattle.net/crazy-cow-3d
 
+### Cheese Chompers 3D
+A rat-themed knockout game that combines physics-based action with cheese collecting mechanics:
+- Control a goofy rat character in chaotic arena battles
+- Knock other players off the platform to be the last rat standing
+- Collect cheese for speed boosts and special abilities
+- Physics-based collisions and momentum mechanics
+- Fast-paced, unblocked gameplay for instant fun
+
+URL: https://crazy-cattle.net/cheese-chompers-3d
+
 ## How To Play
 
 ### Controls
