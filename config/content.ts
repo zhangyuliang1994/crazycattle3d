@@ -68,6 +68,20 @@ export const content = {
     initialRating: 4.8,
     initialVotes: 146
   },
+  gameSection: {
+    title: "Crazy Cattle 3D",
+    game: {
+      url: '/crazy-cattle-3d.embed',
+      title: "crazycattle3d",
+      externalUrl: '/game/crazycattle3d/index.html'
+    }
+  },
+  otherGames: {
+    title: "Play Other Games",
+    cardLabels: {
+      playButton: "Play Now",
+    }
+  },
   howToPlay: {
     title: "How to Play Crazy Cattle 3D - Game Controls & Guide",
     description: "Playing Crazy Cattle 3D online is easy: Use WASD keys for movement and mouse for precise sheep steering in this free browser game. The space bar triggers your special collision ability in Crazy Cattle 3D - master the timing for devastating impacts. Perfect your control over the sheep's momentum as you navigate through the 3D battle arena.\n\n" +
@@ -116,20 +130,6 @@ export const content = {
         answer: "Mastering Crazy Cattle 3D requires understanding of momentum and timing. Start by learning the arena layouts and identifying high-ground advantages. Use the environment to build speed, and practice the signature 'bounce boost' technique for quick escapes. Advanced players can master the 'precision impact' strategy, where carefully timed collisions can send opponents off balance. Remember, strategic positioning often matters more than aggressive charging."
       }
     ]
-  },
-  gameSection: {
-    title: "Crazy Cattle 3D",
-    game: {
-      url: '/crazy-cattle-3d.embed',
-      title: "crazycattle3d",
-      externalUrl: '/game/crazycattle3d/index.html'
-    }
-  },
-  otherGames: {
-    title: "Play Other Games",
-    cardLabels: {
-      playButton: "Play Now",
-    }
   },
   features: {
     title: "Revolutionary Features of Crazy Cattle 3D Online Game",
