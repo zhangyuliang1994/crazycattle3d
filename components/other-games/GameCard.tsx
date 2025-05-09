@@ -1,49 +1,55 @@
-import { content } from "@/config/content";
+// "use client"; // No longer strictly needed if useRouter is removed and Card/subcomponents are server components.
+// However, shadcn/ui components can sometimes pull in client-side dependencies implicitly.
+// For now, let's try removing it. If issues arise, it can be re-added.
+
+import Link from 'next/link';
 import { theme } from "@/config/theme";
-import { Button } from "@/components/ui/button";
+// import { useRouter } from "next/navigation"; // Removed
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 interface GameCardProps {
-  id: string;
+  id: string; // id is used as key by parent component
   title: string;
-  description: string;
+  description: string; // Kept in props for type consistency, though not displayed
   image: string;
   url: string;
-  onPlay: (url: string) => void;
 }
 
-export function GameCard({ id, title, description, image, url, onPlay }: GameCardProps) {
+export function GameCard({ id, title, description, image, url }: GameCardProps) {
+  // const router = useRouter(); // Removed
+  // const handleClick = () => { router.push(url); }; // Removed
+
   return (
-    <Card key={id} className={theme.otherGames.layout.card}>
-      <CardHeader className="p-0">
-        <img
-          src={image}
-          alt={`${title} preview`}
-          className={theme.otherGames.layout.image}
-          loading="lazy"
-        />
-      </CardHeader>
-      <CardContent className="p-4">
-        <CardTitle className={theme.otherGames.spacing.cardTitle}>
-          {title}
-        </CardTitle>
-        <CardDescription className={theme.otherGames.spacing.cardDescription}>
-          {description}
-        </CardDescription>
-        <Button
-          className="w-full"
-          onClick={() => onPlay(url)}
-          aria-label={`Play ${title}`}
-        >
-          {content.otherGames.cardLabels.playButton}
-        </Button>
-      </CardContent>
-    </Card>
+    <Link
+      href={url}
+      aria-label={`Play ${title}`} // More direct aria-label for a link
+      className="block h-full no-underline text-inherit rounded-lg hover:shadow-lg transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    >
+      <Card
+        // Removed interactive props (onClick, role, tabIndex, onKeyDown) as Link handles them.
+        // className adjusted: original theme.otherGames.layout.card was "overflow-hidden hover:shadow-lg transition-shadow"
+        // Hover effects are now on the Link.
+        className="overflow-hidden h-full flex flex-col" // h-full to fill Link, flex flex-col for content alignment
+      >
+        <CardHeader className="p-0">
+          <img
+            src={image}
+            alt={`${title} preview`} // Alt text remains important
+            className={theme.otherGames.layout.image} // w-full h-48 object-cover
+            loading="lazy"
+          />
+        </CardHeader>
+        <CardContent className="p-4 flex-grow flex flex-col justify-center"> {/* flex-grow to push title down if card is taller, justify-center for title vertical centering if needed */}
+          <CardTitle className={`${theme.otherGames.typography.cardTitle} ${theme.otherGames.spacing.cardTitle}`}>
+            {title}
+          </CardTitle>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

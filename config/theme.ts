@@ -159,7 +159,7 @@ export const theme = {
     },
     typography: {
       title: "text-3xl font-bold text-center",
-      cardTitle: "text-xl"
+      cardTitle: "text-lg text-center"
     }
   },
   features: {
@@ -171,26 +171,3 @@ export const theme = {
     }
   }
 } as const;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -79,7 +79,7 @@ export const content = {
     }
   },
   otherGames: {
-    title: "Play Other Games",
+    title: "Hot Games",
     cardLabels: {
       playButton: "Play Now",
     }

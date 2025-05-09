@@ -32,7 +32,9 @@ export function OtherGames({ games, onGameSelect }: OtherGamesProps) {
           <GameCard
             key={game.id}
             {...game}
-            onPlay={onGameSelect}
+            // onPlay prop removed as GameCard now handles navigation directly
+            // and no longer accepts onPlay. The onGameSelect prop passed to OtherGames
+            // is now effectively unused by GameCard.
           />
         ))}
       </div>
