@@ -15,6 +15,7 @@ Crazy Cattle 3D is an independently developed battle royale game featuring explo
 - [Crazy Cattle 3D](https://crazy-cattle.net) - The original free online 3D action game
 - [Crazy Cow 3D](https://crazy-cattle.net/crazy-cow-3d) - Alternative version with hilarious physics-based mayhem
 - [Cheese Chompers 3D](https://crazy-cattle.net/cheese-chompers-3d) - Rat-themed knockout game with cheese collecting action
+- [Brainrot Clicker](https://crazy-cattle.net/brainrot-clicker) - Addictive clicker game with fun themes
 
 ## Gameplay Features
 
