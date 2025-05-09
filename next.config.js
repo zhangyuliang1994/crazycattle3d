@@ -17,15 +17,13 @@ const nextConfig = {
       {
         source: '/cheese-chompers-3d.embed',
         destination: '/game/cheesechompers3d/index.html',
+      },
+      {
+        source: '/brainrot-clicker.embed',
+        destination: '/game/brainrot-clicker/index.html',
       }
     ]
   }
 };
 
 module.exports = nextConfig;
-
-
-
-
-
-
