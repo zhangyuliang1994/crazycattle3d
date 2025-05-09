@@ -137,7 +137,7 @@ export const theme = {
       fullscreenButton: "absolute top-2 right-2 p-2 rounded-lg transition-colors"
     },
     spacing: {
-      section: "mb-16",
+      section: "mb-24", // Increased from mb-16 to add more space after GameSection
       title: "mb-8",
       container: "mb-16"
     },

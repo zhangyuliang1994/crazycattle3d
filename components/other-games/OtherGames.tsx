@@ -16,11 +16,19 @@ interface OtherGamesProps {
   onGameSelect: (url: string) => void;
 }
 
+// Removed incorrect import: import { layout as globalLayout } from "@/config/layout";
+
 export function OtherGames({ games, onGameSelect }: OtherGamesProps) {
   if (games.length === 0) return null;
 
   return (
-    <section id="other-games" className={theme.otherGames.layout.section}>
+    <section
+      id="other-games"
+      className={cn(
+        theme.otherGames.layout.section, // Contains mb-16 (specific to OtherGames section)
+        theme.layout.section.scrollMargin // Contains scroll-mt-16 (general for all sections)
+      )}
+    >
       <h2 className={cn(
         theme.otherGames.typography.title,
         theme.otherGames.spacing.title

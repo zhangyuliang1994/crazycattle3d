@@ -10,7 +10,8 @@ export const content = {
     },
     navigation: {
       links: [
-        { text: "Play Game", href: "#game-section" },
+        { text: "Start Play", href: "#game-section" },
+        { text: "Hot Games", href: "#other-games" },
         { text: "Features", href: "#features" },
         { text: "What Is", href: "#what-is" },
         { text: "How to Play", href: "#how-to-play" },
