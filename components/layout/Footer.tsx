@@ -130,36 +130,49 @@ export function Footer() {
 
         {/* Copyright and Legal Section - 重新设计的部分 */}
         <div className="mt-8 pt-8 border-t">
-          {/* Legal Links 和 Copyright 放在一起 */}
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Copyright */}
-            <div className={cn("text-sm", theme.footer.colors.mutedText)}>
+          {/* Updated Copyright and Legal Links Section */}
+          <div className="text-center">
+            {/* Copyright Line */}
+            <p className={cn("text-sm", theme.footer.colors.mutedText, "mb-2 md:mb-4")}>
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-            </div>
+            </p>
 
-            {/* Legal Links - 使用普通 a 标签 */}
-            {layout.footer.sections.legal && (
-              <div className="mb-4 md:mb-0">
-                <ul className="flex space-x-4">
-                  {content.footer.legal.links.map((link) => (
-                    <li key={link.href}>
-                      <a
-                        href={link.href}
-                        className={cn(
-                          "text-sm",
-                          theme.footer.colors.mutedText,
-                          theme.footer.colors.hover
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            {/* Links Line */}
+            {(() => {
+              const allLegalLinks = content.footer.legal.links;
+              const desiredOrder = ["About Us", "Privacy Policy", "Terms of Service", "Contact Us"];
+              const orderedLinks = desiredOrder
+                .map(text => allLegalLinks.find(link => link.text === text))
+                .filter(link => link !== undefined) as { text: string; href: string }[];
+
+              if (layout.footer.sections.legal && orderedLinks.length > 0) {
+                return (
+                  <nav aria-label="Footer legal links">
+                    <ul className="flex flex-wrap justify-center">
+                      {orderedLinks.map((link, index) => (
+                        <li key={link.href} className="flex items-center">
+                          <Link
+                            href={link.href}
+                            className={cn(
+                              "text-sm",
+                              theme.footer.colors.mutedText,
+                              theme.footer.colors.hover,
+                              "px-2" // Add padding for spacing around pipes
+                            )}
+                          >
+                            {link.text}
+                          </Link>
+                          {index < orderedLinks.length - 1 && (
+                            <span className={cn("text-sm", theme.footer.colors.mutedText)} aria-hidden="true">|</span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                );
+              }
+              return null;
+            })()}
           </div>
 
         </div>
@@ -167,4 +180,3 @@ export function Footer() {
     </footer>
   );
 }
-
