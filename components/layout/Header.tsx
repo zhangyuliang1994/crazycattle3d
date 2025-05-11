@@ -21,21 +21,12 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
   if (!layout.header.isVisible) return null;
 
   // 添加路径解析
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  // const pathname = usePathname(); // No longer needed for title generation
+  // const isHomePage = pathname === "/"; // No longer needed for title generation
 
-  // 格式化路径为标题
+  // 格式化路径为标题 - 现在固定返回品牌名称
   const formatPathToTitle = () => {
-    if (isHomePage) return content.header.title;
-
-    // 移除开头的斜杠，并将所有斜杠替换为破折号
-    const pathSegment = pathname.slice(1).replace(/\//g, '-');
-
-    // 将破折号分隔的单词首字母大写
-    return pathSegment
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+    return content.header.title; // content.header.title is siteConfig.name
   };
 
   const headerClassName = cn(
@@ -71,13 +62,16 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
               )}
             />
           </Link>
-          <h1 className={cn(
-            layout.header.logoSize,
-            "font-bold",
-            theme.header.colors.text
-          )}>
-            {formatPathToTitle()}
-          </h1>
+          <Link href="/" className="no-underline">
+            <h1 className={cn(
+              layout.header.logoSize,
+              "font-bold",
+              theme.header.colors.text,
+              theme.header.colors.hover // Apply hover effect to text as well
+            )}>
+              {formatPathToTitle()}
+            </h1>
+          </Link>
         </div>
 
         {/* 右侧导航和搜索 */}
@@ -137,8 +131,3 @@ export function Header({ searchQuery = "", onSearchChange = () => {}, onSearch =
     </header>
   );
 }
-
-
-
-
-

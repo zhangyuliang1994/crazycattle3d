@@ -29,6 +29,10 @@ export function GamePageTemplate({ gameConfig }: GamePageTemplateProps) {
       <Header />
 
       <main className="container mx-auto px-4 py-8">
+        {/* Add H2 title for the current game */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 lg:mb-12">
+          {gameConfig.content.gameSection?.title || gameConfig.metadata.title}
+        </h2>
         <GameSection content={gameConfig.content} />
         <OtherGames
           games={getOtherGames()}
@@ -80,7 +84,3 @@ export function GamePageTemplate({ gameConfig }: GamePageTemplateProps) {
     </div>
   );
 }
-
-
-
-
