@@ -57,6 +57,7 @@ export const content = {
       title: "Legal",
       links: [
         { text: "About Us", href: "/about" },
+        { text: "Contact Us", href: "/contact" },
         { text: "Privacy Policy", href: "/privacy-policy" },
         { text: "Terms of Service", href: "/terms-of-service" }
       ]
