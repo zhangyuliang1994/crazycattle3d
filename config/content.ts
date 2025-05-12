@@ -37,7 +37,7 @@ export const content = {
         { text: "Crazy Cattle 3D", href: "/" },
         { text: "Crazy Cow 3D", href: "/crazy-cow-3d" },
         { text: "Cheese Chompers 3D", href: "/cheese-chompers-3d" },
-        { text: "Brainrot Clicker", href: "/brainrot-clicker" },
+        { text: "Italian Brainrot Clicker", href: "/brainrot-clicker" },
       ]
     },
     social: {

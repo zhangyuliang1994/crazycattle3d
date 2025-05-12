@@ -30,8 +30,8 @@ export const games: Record<string, Game> = {
   },
   "brainrot-clicker": {
     id: "brainrot-clicker",
-    title: "Brainrot Clicker",
-    description: "Click your way to victory in this addictive and fun clicker game. No download needed – start playing instantly in browser!",
+    title: "Italian Brainrot Clicker",
+    description: "Dive into Italian Brainrot Clicker! Tap through meme madness in this addictive online clicker game. Instant play, no download!",
     image: "/assets/brainrot-clicker/brainrot-clicker.jpg",
     url: "/brainrot-clicker",
   },
