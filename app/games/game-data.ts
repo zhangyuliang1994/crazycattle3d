@@ -35,6 +35,13 @@ export const games: Record<string, Game> = {
     image: "/assets/brainrot-clicker/brainrot-clicker.jpg",
     url: "/brainrot-clicker",
   },
+  "basketball-bros-unblocked": {
+    id: "basketball-bros-unblocked",
+    title: "Basketball Bros Unblocked",
+    description: "Experience exciting basketball action with unique characters. Play online for free, no download required!",
+    image: "/assets/basketball-bros-unblocked/basketball-bros-unblocked.png",
+    url: "/basketball-bros-unblocked",
+  },
 };
 
 // 获取其他游戏列表

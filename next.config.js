@@ -21,6 +21,10 @@ const nextConfig = {
       {
         source: '/brainrot-clicker.embed',
         destination: '/game/brainrot-clicker/index.html',
+      },
+      {
+        source: '/basketball-bros-unblocked.embed',
+        destination: '/game/basketball-bros-unblocked/index.html',
       }
     ]
   }
