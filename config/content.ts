@@ -27,6 +27,7 @@ export const content = {
     quickLinks: {
       title: "Quick Links",
       links: [
+        { text: "Snake Game", href: "https://snake-game.online" },
         { text: "Blue Prince Guide", href: "https://blue-prince.net" },
         { text: "AI Image Generator", href: "https://aiimage.pics" },
       ]
