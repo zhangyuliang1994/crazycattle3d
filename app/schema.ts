@@ -65,7 +65,7 @@ export const generateRatingSchema = (rating: number, votes: number) => {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Crazy Cattle 3D",
+    "name": siteConfig.name,
     "applicationCategory": "GameApplication",
     "operatingSystem": "Any",
     "aggregateRating": {
