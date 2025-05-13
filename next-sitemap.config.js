@@ -15,7 +15,7 @@ module.exports = {
     if (path === '/' || path === '') {
       priority = 1.0;
       changefreq = 'daily';
-    } else if (path === '/privacy-policy' || path === '/terms-of-service') {
+    } else if (path === '/privacy-policy' || path === '/terms-of-service' || path === '/about' || path === '/contact') {
       priority = 0.8;
       changefreq = 'monthly';
     }
@@ -106,7 +106,3 @@ module.exports = {
     additionalSitemaps: [],
   },
 }
-
-
-
-
