@@ -42,9 +42,18 @@ export const games: Record<string, Game> = {
     image: "/assets/basketball-bros-unblocked/basketball-bros-unblocked.png",
     url: "/basketball-bros-unblocked",
   },
+  "pokemon-gamma-emerald": {
+    id: "pokemon-gamma-emerald",
+    title: "Pokemon Gamma Emerald",
+    description: "Play this enhanced Pokemon ROM hack with new features, Pokemon, and challenging gameplay.",
+    image: "/assets/pokemon-gamma-emerald/pokemon-gamma-emerald.webp", // 更新为实际的图片
+    url: "/pokemon-gamma-emerald",
+  },
 };
 
 // 获取其他游戏列表
 export function getOtherGames(): Game[] {
   return Object.values(games);
 }
+
+

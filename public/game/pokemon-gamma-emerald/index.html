@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/game/pokemon-gamma-emerald/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Pokemon Gamma Emerald</title>
+    <meta name="robots" content="noindex">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative; /* For positioning splash screen */
+        }
+
+        #game-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .gamePlayerHidden {
+            display: none !important;
+        }
+
+        /* Splash Screen Styles */
+        .gamePlayerSplashPreroll {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000; /* Default background */
+        }
+        .gamePlayerBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .gamePlayerBgImage {
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/pokemon-gamma-emerald/pokemon-gamma-emerald.webp'); /* 更新为实际存在的图片 */
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px) brightness(0.7);
+        }
+        .gamePlayerSplashContent {
+            position: relative; /* To be above the blurred background */
+            text-align: center;
+            color: white;
+        }
+        .gamePlayerCenterContent {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .gamePlayerPrerollInfo {
+            margin-top: 20px;
+        }
+        .gamePlayerButtons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gamePlayerPrerollCTA {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gamePlayerPrerollCTA:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .gamePlayerPrerollCTA span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gamePlayerPrerollCTA svg {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="gamePlayerSplashPreroll">
+        <div class="gamePlayerBg">
+            <div class="gamePlayerBgImage"></div>
+        </div>
+        <div class="gamePlayerSplashContent">
+            <div class="gamePlayerCenterContent">
+                <div>
+                    <div class="gamePlayerPrerollInfo" style="margin-top: 200px;">
+                        <div class="gamePlayerButtons">
+                            <div class="gamePlayerPrerollCTA" id="btn_playgame" onclick="showGame()">
+                                <span>Play Now
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Iframe (initially hidden) -->
+    <iframe
+        id="game-iframe"
+        class="gamePlayerHidden"
+        src="https://itch.io/embed-hotlink/2228511"
+        allowfullscreen="true"
+        allow="autoplay; fullscreen; gamepad; keyboard-map; xr-spatial-tracking"
+        title="Pokemon Gamma Emerald">
+    </iframe>
+
+    <script>
+        function showGame() {
+            // Hide splash screen
+            var splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                splashScreen.classList.add('gamePlayerHidden');
+            }
+
+            // Show game iframe
+            var gameIframe = document.getElementById('game-iframe');
+            if (gameIframe) {
+                gameIframe.classList.remove('gamePlayerHidden');
+                // Optional: Focus the iframe if needed, though this can be tricky
+                // gameIframe.focus();
+            }
+        }
+    </script>
+</body>
+</html>

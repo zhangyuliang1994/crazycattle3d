@@ -25,9 +25,14 @@ const nextConfig = {
       {
         source: '/basketball-bros-unblocked.embed',
         destination: '/game/basketball-bros-unblocked/index.html',
-      }
+      },
+      {
+        source: '/pokemon-gamma-emerald.embed',
+        destination: '/game/pokemon-gamma-emerald/index.html',
+      },
     ]
   }
 };
 
 module.exports = nextConfig;
+

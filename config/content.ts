@@ -40,6 +40,7 @@ export const content = {
         { text: "Cheese Chompers 3D", href: "/cheese-chompers-3d" },
         { text: "Italian Brainrot Clicker", href: "/brainrot-clicker" },
         { text: "Basketball Bros Unblocked", href: "/basketball-bros-unblocked" },
+        { text: "Pokemon Gamma Emerald", href: "/pokemon-gamma-emerald" },
       ]
     },
     social: {
@@ -197,3 +198,4 @@ export const content = {
     ]
   }
 } as const;
+
