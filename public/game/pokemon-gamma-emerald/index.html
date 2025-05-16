@@ -91,6 +91,7 @@
             border-radius: 50px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
         .gamePlayerPrerollCTA:hover {
             background-color: #45a049;
@@ -118,7 +119,7 @@
         <div class="gamePlayerSplashContent">
             <div class="gamePlayerCenterContent">
                 <div>
-                    <div class="gamePlayerPrerollInfo" style="margin-top: 200px;">
++                   <div class="gamePlayerPrerollInfo" style="margin-top: 30vh; transform: translateY(-50%);">
                         <div class="gamePlayerButtons">
                             <div class="gamePlayerPrerollCTA" id="btn_playgame" onclick="showGame()">
                                 <span>Play Now

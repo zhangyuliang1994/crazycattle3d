@@ -97,6 +97,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
             transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
             animation: breathingEffect 2.5s ease-in-out infinite;
+            z-index: 1000;
         }
         .gamePlayerPrerollCTA:hover {
             transform: scale(1.03); /* Slight scale up on hover, no longer changing bg color */
@@ -123,7 +124,7 @@
         <div class="gamePlayerSplashContent">
             <div class="gamePlayerCenterContent">
                 <div>
-                    <div class="gamePlayerPrerollInfo" style="margin-top: 100px;">
+                    <div class="gamePlayerPrerollInfo" style="margin-top: 30vh; transform: translateY(-50%);">
                         <div class="gamePlayerButtons">
                             <div class="gamePlayerPrerollCTA" id="btn_playgame" onclick="showGame()">
                                 <span>Play Now
@@ -172,3 +173,5 @@
     </script>
 </body>
 </html>
+
+
