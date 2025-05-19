@@ -18,6 +18,7 @@ Crazy Cattle 3D is an independently developed battle royale game featuring explo
 - [Italian Brainrot Clicker](https://crazy-cattle.net/brainrot-clicker) - Dive into Italian Brainrot Clicker! Tap through meme madness in this addictive online clicker game. Instant play, no download!
 - [Basketball Bros Unblocked](https://crazy-cattle.net/basketball-bros-unblocked) - Experience exciting basketball action with unique characters. Play online for free, no download required!
 - [Pokemon Gamma Emerald](https://crazy-cattle.net/pokemon-gamma-emerald) - A fan-made Pokemon adventure with enhanced features. Play online for free, no download required!
+- [Crazy Chicken 3D](https://crazy-cattle.net/crazy-chicken-3d) - Feathery battle royale with physics-based chicken combat. Play this free online game with no download required!
 
 ## Gameplay Features
 
@@ -60,3 +61,4 @@ Crazy Cattle 3D is an independently developed battle royale game featuring explo
 Crazy Cattle 3D offers a unique physics-based gameplay experience where players control explosive sheep across varied terrain. Master the art of sheep locomotion across three distinct environments: the rolling hills of Ireland, volcanic Iceland, and mountainous New Zealand. Each map offers unique strategic opportunities, creating a chaotic yet strategic battle experience.
 
 While the game's high difficulty level may challenge newcomers, mastering our unique physics system delivers a deeply satisfying experience. Play directly in your browser - no downloads needed, just pure explosive action that keeps you coming back for more.
+

@@ -49,11 +49,19 @@ export const games: Record<string, Game> = {
     image: "/assets/pokemon-gamma-emerald/pokemon-gamma-emerald.webp", // 更新为实际的图片
     url: "/pokemon-gamma-emerald",
   },
+  "crazy-chicken-3d": {
+    id: "crazy-chicken-3d",
+    title: "Crazy Chicken 3D",
+    description: "Experience unpredictable fun with Crazy Chicken 3D's physics engine! Control a chaotic chicken in this hilarious action game.",
+    image: "/assets/crazy-chicken-3d/crazy-chicken-3d.webp",
+    url: "/crazy-chicken-3d",
+  }
 };
 
 // 获取其他游戏列表
 export function getOtherGames(): Game[] {
   return Object.values(games);
 }
+
 
 

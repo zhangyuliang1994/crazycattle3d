@@ -37,6 +37,7 @@ export const content = {
       links: [
         { text: "Crazy Cattle 3D", href: "/" },
         { text: "Crazy Cow 3D", href: "/crazy-cow-3d" },
+        { text: "Crazy Chicken 3D", href: "/crazy-chicken-3d" },
         { text: "Cheese Chompers 3D", href: "/cheese-chompers-3d" },
         { text: "Italian Brainrot Clicker", href: "/brainrot-clicker" },
         { text: "Basketball Bros Unblocked", href: "/basketball-bros-unblocked" },
@@ -198,4 +199,5 @@ export const content = {
     ]
   }
 } as const;
+
 

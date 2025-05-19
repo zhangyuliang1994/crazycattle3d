@@ -30,9 +30,14 @@ const nextConfig = {
         source: '/pokemon-gamma-emerald.embed',
         destination: '/game/pokemon-gamma-emerald/index.html',
       },
+      {
+        source: '/crazy-chicken-3d.embed',
+        destination: '/game/crazy-chicken-3d/index.html',
+      },
     ]
   }
 };
 
 module.exports = nextConfig;
+
 
