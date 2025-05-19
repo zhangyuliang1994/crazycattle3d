@@ -1,8 +1,9 @@
 // @ts-check
+const { siteConfig } = require('./config/site');
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://crazy-cattle.net',
+  siteUrl:  siteConfig.url,
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.9,

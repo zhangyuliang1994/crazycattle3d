@@ -1,29 +1,37 @@
-export const siteConfig = {
-  name: "Crazy Cattle 3D",
-  description: "Play Crazy Cattle 3D unblocked online for free. Control crazy cattle in this 3D action game. No download required, start playing instantly in your browser!",
-  domain: "crazy-cattle.net",
-  url: "https://crazy-cattle.net",
-  email: "support@crazy-cattle.net",
-  author: "Crazy Cattle 3D",
+/**
+ * TypeScript 类型定义和配置导出
+ */
+
+// 定义配置类型
+export interface SiteConfig {
+  name: string;
+  description: string;
+  domain: string;
+  url: string;
+  email: string;
+  author: string;
   social: {
-    twitter: "CrazyCattle",
-    facebook: "CrazyCattle",
-  },
+    twitter: string;
+    facebook: string;
+  };
   metadata: {
-    keywords: ["crazy cattle", "3d game", "online game", "free game"],
-    themeColor: "#ffffff",
-    manifestPath: "/assets/img/site.webmanifest",
-  },
+    keywords: string[];
+    themeColor: string;
+    manifestPath: string;
+  };
   images: {
     icon: {
-      favicon: "/assets/img/favicon.ico",
-      favicon16: "/assets/img/favicon-16x16.png",
-      favicon32: "/assets/img/favicon-32x32.png",
-      apple: "/assets/img/apple-touch-icon.png",
-      // safari: "/assets/img/safari-pinned-tab.svg",
-    },
-    og: "/assets/img/crazy-cattle-3d-og-image.png",
-  },
-} as const;
+      favicon: string;
+      favicon16: string;
+      favicon32: string;
+      apple: string;
+    };
+    og: string;
+  };
+}
 
-export type SiteConfig = typeof siteConfig;
+// 导入 JavaScript 配置
+import { siteConfig as config } from './site.js';
+
+// 导出配置
+export const siteConfig: SiteConfig = config;
