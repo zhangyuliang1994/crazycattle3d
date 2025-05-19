@@ -1,6 +1,6 @@
 {
-    "name": "Crazy Crazy 3D",
-    "short_name": "Craze3",
+    "name": "Crazy Cattle 3D",
+    "short_name": "Craze3D",
     "icons": [
       {
         "src": "/assets/img/android-chrome-192x192.png",
@@ -18,4 +18,5 @@
     "background_color": "#ffffff",
     "display": "standalone"
   }
+
 

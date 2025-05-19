@@ -5,11 +5,25 @@ import { pokemonGammaEmeraldContent } from "./content";
 
 export const metadata: Metadata = {
   title: `Pokemon Gamma Emerald | Play Free Game | ${siteConfig.domain}`,
-  description: "PPlay Pokémon Gamma Emerald, an enhanced Emerald rom hack, online for free! Discover new Pokémon, updated graphics & a challenging adventure. Play now!",
+  description: "Play Pokémon Gamma Emerald, an enhanced Emerald rom hack, online for free! Discover new Pokémon, updated graphics & a challenging adventure. Play now!",
   openGraph: {
     title: `Pokemon Gamma Emerald Unblocked | Play Free Game | ${siteConfig.domain}`,
     description: "Play the enhanced Pokemon Gamma Emerald version online for free.",
-    // images: [{ url: `https://${siteConfig.domain}/assets/pokemon-gamma-emerald/pokemon-gamma-emerald.png` }]
+    type: 'website',
+    url: `${siteConfig.url}/pokemon-gamma-emerald`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `/assets/pokemon-gamma-emerald/pokemon-gamma-emerald-logo.webp`,
+        alt: `Pokemon Gamma Emerald Screenshot`,
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pokemon Gamma Emerald - Free Online Rom Hack',
+    description: 'Play Pokemon Gamma Emerald enhanced version online for free without download',
+    images: [`/assets/pokemon-gamma-emerald/pokemon-gamma-emerald-logo.webp`],
   },
   alternates: {
     canonical: `/pokemon-gamma-emerald`,
