@@ -28,8 +28,13 @@ export const content = {
       title: "Quick Links",
       links: [
         { text: "Snake Game", href: "https://snake-game.online" },
-        { text: "Blue Prince Guide", href: "https://blue-prince.net" },
-        { text: "AI Image Generator", href: "https://aiimage.pics" },
+        { text: "Evernote", href: "https://lite.evernote.com/note/a7633e02-bcf7-d080-171a-a858eec4a9d2" },
+        { text: "CAL", href: "https://cal.com/vincent-ai" },
+        { text: "Patreon", href: "https://www.patreon.com/vincent_ai/about" },
+        { text: "Pinterest", href: "https://www.pinterest.com/pin/581245895696208484/" },
+        { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
+        { text: "Substack", href: "https://substack.com/@vincent879601/posts" },
+        { text: "Creem", href: "https://www.creem.io/bip/vincent-ai" },
       ]
     },
     games: {  // 添加 games section
@@ -121,7 +126,7 @@ export const content = {
       alt: "Crazy Cattle 3D - Free Online Unblocked Game Logo"
     }
   },
-    faq: {
+  faq: {
     // Title already well-optimized
     title: "Frequently Asked Questions - Crazy Cattle 3D Online Game",
     items: [
