@@ -30,7 +30,7 @@ export const content = {
         { text: "Snake Game", href: "https://snake-game.online" },
         { text: "Evernote", href: "https://lite.evernote.com/note/a7633e02-bcf7-d080-171a-a858eec4a9d2" },
         { text: "CAL", href: "https://cal.com/vincent-ai" },
-        { text: "Patreon", href: "https://www.patreon.com/vincent_ai/about" },
+        { text: "Patreon", href: "https://www.patreon.com/posts/crazy-cattle-3d-129397709" },
         { text: "Pinterest", href: "https://www.pinterest.com/pin/581245895696208484/" },
         { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
         { text: "Substack", href: "https://substack.com/@vincent879601/posts" },
