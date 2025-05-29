@@ -138,6 +138,24 @@ The game delivers 30-minute matches of pure explosive action, where strategic po
 - Node.js 16.x or higher
 - npm or yarn
 
+### Environment Variables Setup
+
+Create a `.env.local` file in the project root:
+
+```bash
+# Google Analytics Configuration
+# Replace with your own Google Analytics ID
+# How to get: https://analytics.google.com/ → Admin → Data Streams → Measurement ID
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+
+# Other optional configurations
+# NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+**Note**: 
+- The `.env.local` file is included in `.gitignore` and will not be committed to the repository
+- Please replace `G-XXXXXXXXXX` with your own Google Analytics Measurement ID
+
 ### Install Dependencies
 
 ```bash
@@ -240,6 +258,39 @@ For social media preview image generation guide, refer to `OG_IMAGE_README.md`.
 ## Deployment
 
 The project is configured for automatic deployment through Vercel. Changes pushed to the main branch will automatically deploy to production.
+
+### Vercel Environment Variables Setup
+
+Configure the following environment variables in Vercel Console:
+
+1. Login to [Vercel Dashboard](https://vercel.com/dashboard)
+2. Select your project
+3. Go to **Settings** → **Environment Variables**
+4. Add the following variables:
+
+```
+Name: NEXT_PUBLIC_GA_ID
+Value: G-XXXXXXXXXX
+Environment: Production, Preview, Development
+```
+
+**Or using Vercel CLI:**
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Set environment variable
+vercel env add NEXT_PUBLIC_GA_ID
+# Enter value: G-XXXXXXXXXX
+# Select environments: Production, Preview, Development
+```
+
+### Automatic Deployment
+
+- **Production**: Push to `main` branch triggers automatic deployment
+- **Preview**: Creating Pull Requests automatically generates preview links
+- **Development**: Use `vercel dev` for local development
 
 ## License
 

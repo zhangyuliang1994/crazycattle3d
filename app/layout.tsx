@@ -48,6 +48,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
       <head>
@@ -58,20 +60,24 @@ export default function RootLayout({
         {/* <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" /> */}
         <link rel="shortcut icon" href={siteConfig.images.icon.favicon} />
         <meta name="theme-color" content={siteConfig.metadata.themeColor} />
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-46C0JN25YJ`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        {/* Google Analytics - 只在有GA ID时加载 */}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', 'G-46C0JN25YJ');
-          `}
-        </Script>
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

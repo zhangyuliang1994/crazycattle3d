@@ -115,6 +115,24 @@ Crazy Cattle 3D 是一款基于物理引擎的 3D 动作游戏，可直接在浏
 - Node.js 16.x 或更高版本
 - npm 或 yarn
 
+### 环境变量配置
+
+在项目根目录创建 `.env.local` 文件：
+
+```bash
+# Google Analytics Configuration
+# 请替换为您自己的 Google Analytics ID
+# 获取方式: https://analytics.google.com/ → 管理 → 数据流 → 衡量ID
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+
+# 其他可选配置
+# NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+**注意**: 
+- `.env.local` 文件已在 `.gitignore` 中，不会被提交到代码库
+- 请将 `G-XXXXXXXXXX` 替换为您自己的 Google Analytics 衡量ID
+
 ### 安装依赖
 
 ```bash
@@ -217,6 +235,39 @@ npm run clean-sitemap
 ## 部署
 
 项目配置为通过 Vercel 自动部署。推送到主分支的更改将自动部署到生产环境。
+
+### Vercel 环境变量配置
+
+在 Vercel 控制台中配置以下环境变量：
+
+1. 登录 [Vercel Dashboard](https://vercel.com/dashboard)
+2. 选择您的项目
+3. 进入 **Settings** → **Environment Variables**
+4. 添加以下变量：
+
+```
+Name: NEXT_PUBLIC_GA_ID
+Value: G-XXXXXXXXXX
+Environment: Production, Preview, Development
+```
+
+**或者使用 Vercel CLI：**
+
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 设置环境变量
+vercel env add NEXT_PUBLIC_GA_ID
+# 输入值: G-XXXXXXXXXX
+# 选择环境: Production, Preview, Development
+```
+
+### 自动部署
+
+- **生产环境**: 推送到 `main` 分支自动部署
+- **预览环境**: 创建 Pull Request 自动生成预览链接
+- **开发环境**: 使用 `vercel dev` 本地开发
 
 ## 许可证
 
