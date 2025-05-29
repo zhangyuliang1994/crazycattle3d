@@ -2,6 +2,8 @@
 
 🎮 **官方网站**: [Crazy Cattle 3D 官方网站](https://crazy-cattle.net/)
 
+📖 **English Version**: [README_EN.md](./README_EN.md)
+
 这是 Crazy Cattle 3D 游戏的官方网站项目，基于 Next.js 构建。该网站提供多款游戏嵌入、游戏信息展示以及针对搜索引擎和 AI 爬虫的优化。
 
 ## 项目概述
@@ -196,6 +198,7 @@ npm run clean-sitemap
 - 🔗 **Linktr**: [Linktr 链接树](https://linktr.ee/vincent20250520)
 - 📰 **Substack**: [Substack 博客](https://substack.com/@vincent879601/posts)
 - 🎨 **Creem**: [Creem 创作平台](https://www.creem.io/bip/vincent-ai)
+- 💻 **CrazyCattle3d Github**: [项目英文文档](https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md)
 
 ## AI 爬虫优化
 
@@ -214,11 +217,6 @@ npm run clean-sitemap
 ## 部署
 
 项目配置为通过 Vercel 自动部署。推送到主分支的更改将自动部署到生产环境。
-
-### 环境变量
-
-项目使用以下环境变量：
-- Google Analytics ID: `G-46C0JN25YJ`
 
 ## 许可证
 

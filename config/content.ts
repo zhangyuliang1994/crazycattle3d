@@ -35,6 +35,7 @@ export const content = {
         { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
         { text: "Substack", href: "https://substack.com/@vincent879601/posts" },
         { text: "Creem", href: "https://www.creem.io/bip/vincent-ai" },
+        { text: "CrazyCattle3d Github", href: "https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md" },
       ]
     },
     games: {  // 添加 games section
