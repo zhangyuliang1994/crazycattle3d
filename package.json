@@ -5,7 +5,8 @@
   "scripts": {
     "clean-sitemap": "rm -rf public/sitemap*.xml public/robots.txt",
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "verification": "node generate-verification.js",
+    "build": "next build && next-sitemap && npm run verification",
     "start": "next start",
     "lint": "next lint",
     "sitemap": "npm run clean-sitemap && next-sitemap"
@@ -70,11 +71,8 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.5.0"
   }
 }
-
-
-
-
-
-
