@@ -34,6 +34,10 @@ const nextConfig = {
         source: '/crazy-chicken-3d.embed',
         destination: '/game/crazy-chicken-3d/index.html',
       },
+      {
+        source: '/sprunki-incredibox.embed',
+        destination: '/game/sprunki-incredibox/index.html',
+      },
     ]
   }
 };

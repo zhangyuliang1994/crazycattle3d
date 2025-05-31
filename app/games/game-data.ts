@@ -55,6 +55,13 @@ export const games: Record<string, Game> = {
     description: "Experience unpredictable fun with Crazy Chicken 3D's physics engine! Control a chaotic chicken in this hilarious action game.",
     image: "/assets/crazy-chicken-3d/crazy-chicken-3d.webp",
     url: "/crazy-chicken-3d",
+  },
+  "sprunki-incredibox": {
+    id: "sprunki-incredibox",
+    title: "Sprunki Incredibox",
+    description: "Create amazing music beats with colorful characters in this fun interactive music game. Drag and drop to make music!",
+    image: "/assets/sprunki-incredibox/sprunki-incredibox.webp",
+    url: "/sprunki-incredibox",
   }
 };
 

@@ -48,6 +48,7 @@ export const content = {
         { text: "Italian Brainrot Clicker", href: "/brainrot-clicker" },
         { text: "Basketball Bros Unblocked", href: "/basketball-bros-unblocked" },
         { text: "Pokemon Gamma Emerald", href: "/pokemon-gamma-emerald" },
+        { text: "Sprunki Incredibox", href: "/sprunki-incredibox" },
       ]
     },
     social: {
