@@ -33,7 +33,6 @@ export const content = {
         { text: "Patreon", href: "https://www.patreon.com/posts/crazy-cattle-3d-129397709" },
         { text: "Pinterest", href: "https://www.pinterest.com/pin/581245895696208484/" },
         { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
-        { text: "Substack", href: "https://substack.com/@vincent879601/posts" },
         { text: "Creem", href: "https://www.creem.io/bip/vincent-ai" },
         { text: "CrazyCattle3d Github", href: "https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md" },
       ]
