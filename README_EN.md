@@ -8,7 +8,7 @@ This is the official website project for Crazy Cattle 3D game, built with Next.j
 
 ## Project Overview
 
-Crazy Cattle 3D is a physics-based 3D action game that runs directly in browsers without downloads. This project is the official website for the game, now expanded into a multi-game platform offering 7 different types of browser games.
+Crazy Cattle 3D is a physics-based 3D action game that runs directly in browsers without downloads. This project is the official website for the game, now expanded into a multi-game platform offering multiple different types of browser games.
 
 ## About the Game
 
@@ -42,10 +42,11 @@ The game delivers 30-minute matches of pure explosive action, where strategic po
 5. **[Basketball Bros Unblocked](https://crazy-cattle.net/basketball-bros-unblocked)** - Basketball action game
 6. **[Pokemon Gamma Emerald](https://crazy-cattle.net/pokemon-gamma-emerald)** - Enhanced Pokemon fan-made version
 7. **[Crazy Chicken 3D](https://crazy-cattle.net/crazy-chicken-3d)** - Crazy chicken physics battle game
+8. **[Sprunki Incredibox](https://crazy-cattle.net/sprunki-incredibox)** - Interactive music creation fan-mod game
 
 ### Main Features
 
-- **Multi-Game Embed & Display** - Supports 7 different types of browser games
+- **Multi-Game Embed & Display** - Supports multiple different types of browser games
 - **Unified Game Page Template** - Each game has complete introduction, features, gameplay and FAQ
 - **Game Features, Gameplay & FAQ Introduction** - Detailed game guides and common questions
 - **Search Engine Optimization (SEO)** - Complete meta tags and structured data
@@ -75,6 +76,7 @@ The game delivers 30-minute matches of pure explosive action, where strategic po
 │   ├── brainrot-clicker/   # Italian Brainrot Clicker game page
 │   ├── basketball-bros-unblocked/ # Basketball Bros game page
 │   ├── pokemon-gamma-emerald/     # Pokemon Gamma Emerald game page
+│   ├── sprunki-incredibox/ # Sprunki Incredibox game page
 │   ├── games/              # Game list and data configuration
 │   ├── about/              # About page
 │   ├── contact/            # Contact page
@@ -111,6 +113,7 @@ The game delivers 30-minute matches of pure explosive action, where strategic po
 │   │   ├── brainrot-clicker/ # Brainrot Clicker related images
 │   │   ├── basketball-bros-unblocked/ # Basketball Bros related images
 │   │   ├── pokemon-gamma-emerald/ # Pokemon related images
+│   │   ├── sprunki-incredibox/ # Sprunki Incredibox related images
 │   │   └── img/            # Site common images
 │   ├── game/               # Game files directory
 │   │   ├── crazycattle3d/  # Crazy Cattle 3D game files
@@ -119,7 +122,8 @@ The game delivers 30-minute matches of pure explosive action, where strategic po
 │   │   ├── cheesechompers3d/ # Cheese Chompers 3D game files
 │   │   ├── brainrot-clicker/ # Brainrot Clicker game files
 │   │   ├── basketball-bros-unblocked/ # Basketball Bros game files
-│   │   └── pokemon-gamma-emerald/ # Pokemon game files
+│   │   ├── pokemon-gamma-emerald/ # Pokemon game files
+│   │   └── sprunki-incredibox/ # Sprunki Incredibox game files
 │   ├── llms.txt            # AI crawler dedicated content summary
 │   ├── llms-full.txt       # AI crawler dedicated full content
 │   ├── robots.txt          # Search engine crawler rules
@@ -207,6 +211,7 @@ The website embeds games through iframe, each game has corresponding embed route
 - `/basketball-bros-unblocked.embed` → `/game/basketball-bros-unblocked/index.html`
 - `/pokemon-gamma-emerald.embed` → `/game/pokemon-gamma-emerald/index.html`
 - `/crazy-chicken-3d.embed` → `/game/crazy-chicken-3d/index.html`
+- `/sprunki-incredibox.embed` → `/game/sprunki-incredibox/index.html`
 
 For detailed game localization deployment guide, refer to `IFRAME_DOWNLOAD_README.md`.
 
