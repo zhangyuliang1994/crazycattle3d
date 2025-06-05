@@ -62,6 +62,13 @@ export const games: Record<string, Game> = {
     description: "Create amazing music beats with colorful characters in this fun interactive music game. Drag and drop to make music!",
     image: "/assets/sprunki-incredibox/sprunki-incredibox.webp",
     url: "/sprunki-incredibox",
+  },
+  "doodle-baseball": {
+    id: "doodle-baseball",
+    title: "Doodle Baseball",
+    description: "Classic Google Doodle baseball game! Control cute food characters as batters and test your timing skills in this fun and addictive baseball experience.",
+    image: "https://doodle-baseball.net/assets/doodle-baseball/doodle-baseball.webp",
+    url: "https://doodle-baseball.net/",
   }
 };
 
