@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: `${siteConfig.name} | Unblocked Free Game | ${siteConfig.domain}`,
+  title: `${siteConfig.name} | 免费在线农场游戏 | ${siteConfig.domain}`,
   description: siteConfig.description,
   openGraph: {
-    title: `${siteConfig.name} Unblocked | Play Free Game | ${siteConfig.domain}`,
+    title: `${siteConfig.name} 免费版 | 在线农场游戏 | ${siteConfig.domain}`,
     description: siteConfig.description,
     type: 'website',
     url: siteConfig.url,
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.images.og,
-        alt: `${siteConfig.name} Screenshot`,
+        alt: `${siteConfig.name} 游戏截图`,
       }
     ],
-    locale: 'en_US',
+    locale: 'zh_CN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crazy Cattle 3D - Free Online Game',
-    description: 'Play free online game without download at Crazy Cattle 3D',
-    images: [siteConfig.images.og],  // 添加 Twitter 卡片图片
+    title: 'Super Farm Adventure - 免费在线农场游戏',
+    description: '在 Super Farm Adventure 免费在线游玩农场游戏，无需下载',
+    images: [siteConfig.images.og],
   },
   robots: {
     index: true,
@@ -53,13 +53,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="apple-touch-icon" sizes="180x180" href={siteConfig.images.icon.apple} />
-        <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.images.icon.favicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={siteConfig.images.icon.favicon16} />
-        <link rel="manifest" href={siteConfig.metadata.manifestPath} />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
         {/* <link rel="mask-icon" href={siteConfig.images.icon.safari} color="#5bbad5" /> */}
         <link rel="shortcut icon" href={siteConfig.images.icon.favicon} />
-        <meta name="theme-color" content={siteConfig.metadata.themeColor} />
         {/* Google Analytics - 只在有GA ID时加载 */}
         {gaId && (
           <>
@@ -79,7 +80,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
