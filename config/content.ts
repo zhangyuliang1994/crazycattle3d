@@ -27,14 +27,15 @@ export const content = {
     quickLinks: {
       title: "Quick Links",
       links: [
-        { text: "Snake Game", href: "https://snake-game.online" },
-        { text: "Evernote", href: "https://lite.evernote.com/note/a7633e02-bcf7-d080-171a-a858eec4a9d2" },
+        { text: "Evernote", href: "https://lite.evernote.com/note/87300725-c873-8deb-1d2a-bf31aa95ac39" },
         { text: "CAL", href: "https://cal.com/vincent-ai" },
-        { text: "Patreon", href: "https://www.patreon.com/posts/crazy-cattle-3d-129397709" },
-        { text: "Pinterest", href: "https://www.pinterest.com/pin/581245895696208484/" },
+        { text: "Patreon", href: "https://www.patreon.com/posts/play-free-crazy-130738673" },
         { text: "Linktr", href: "https://linktr.ee/vincent20250520" },
         { text: "Creem", href: "https://www.creem.io/bip/vincent-ai" },
-        { text: "CrazyCattle3d Github", href: "https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md" },
+        { text: "GetAllMyLinks", href: "https://getallmylinks.com/vincent" },
+        { text: "Pinterest | Crazy Cattle 3D", href: "https://www.pinterest.com/pin/581245895696208484/" },
+        { text: "Pinterest | Doodle Baseball", href: "https://www.pinterest.com/pin/581245895696901681/" },
+        { text: "Github | Crazy Cattle 3D", href: "https://github.com/WeiWenxing/crazycattle3d/blob/main/README_EN.md" },
       ]
     },
     games: {  // 添加 games section
